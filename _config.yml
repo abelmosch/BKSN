@@ -1,0 +1,17 @@
+title: Bakasana
+description: Balance training for iOS and Android
+url: https://abelmosch.github.io
+baseurl: /BKSN
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: pretty
+
+exclude:
+  - .gitignore
+  - README.md
+  - privacy_policy.md
+  - terms_of_service.md

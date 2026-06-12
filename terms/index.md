@@ -1,7 +1,17 @@
-# Bakasana — Terms of Service
+---
+layout: default
+title: Terms of Service
+description: Terms and conditions for using the Bakasana mobile application.
+permalink: /terms/
+---
 
-**Last updated:** June 9, 2026
-**Effective date:** June 9, 2026
+<div class="legal-doc" markdown="1">
+
+<p class="legal-eyebrow label-caps">Legal Archive / Terms of Service</p>
+
+# Terms of Service
+
+<p class="meta"><strong>Last updated:</strong> June 9, 2026<br><strong>Effective date:</strong> June 9, 2026</p>
 
 Please read these Terms of Service ("Terms") carefully before using the Bakasana mobile application ("the App", "Service") operated by Bakasana ("we", "us", "our").
 
@@ -153,7 +163,7 @@ If any provision of these Terms is found to be unenforceable or invalid, that pr
 
 ## 16. Entire Agreement
 
-These Terms, together with the [Privacy Policy](https://abelmosch.github.io/BKSN/privacy/), constitute the entire agreement between you and Bakasana regarding the use of the App and supersede any prior agreements.
+These Terms, together with the [Privacy Policy]({{ '/privacy/' | relative_url }}), constitute the entire agreement between you and Bakasana regarding the use of the App and supersede any prior agreements.
 
 ---
 
@@ -167,5 +177,7 @@ We reserve the right to modify these Terms at any time. Material changes will be
 
 If you have questions about these Terms, contact us at:
 
-**Email:** bakasana.app@gmail.com
-**Website:** [https://abelmosch.github.io/BKSN/terms/](https://abelmosch.github.io/BKSN/terms/)
+**Email:** bakasana.app@gmail.com  
+**Website:** [{{ site.url }}{{ site.baseurl }}/terms/]({{ site.url }}{{ site.baseurl }}/terms/)
+
+</div>

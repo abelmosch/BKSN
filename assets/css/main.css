@@ -1,0 +1,568 @@
+:root {
+  --surface: #f9f9f9;
+  --surface-white: #ffffff;
+  --surface-alt: #f2f2f2;
+  --surface-container: #eeeeee;
+  --surface-container-low: #f3f3f4;
+  --background: #f9f9f9;
+  --primary: #000000;
+  --on-primary: #ffffff;
+  --on-surface: #1a1c1c;
+  --on-surface-variant: #4c4546;
+  --secondary: #5e5e5e;
+  --industrial-smoke: #808080;
+  --border: #000000;
+  --margin-mobile: 16px;
+  --margin-desktop: 48px;
+  --section-gap: 96px;
+  --header-height: 64px;
+  --max-width: 48rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--on-surface);
+  background: var(--background);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(100% - (var(--margin-mobile) * 2), var(--max-width));
+  margin-inline: auto;
+}
+
+.container--wide {
+  width: min(100% - (var(--margin-mobile) * 2), 72rem);
+}
+
+/* Typography */
+
+.headline-lg {
+  margin: 0;
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.headline-md {
+  margin: 0;
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.body-lg {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--on-surface);
+}
+
+.body-md {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--on-surface);
+}
+
+.label-caps {
+  font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.label-sm {
+  font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--secondary);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.brand-name {
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  transition: color 0.15s linear, background-color 0.15s linear;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--primary);
+  background: var(--surface-alt);
+}
+
+.site-nav .nav-sep {
+  color: var(--industrial-smoke);
+  user-select: none;
+}
+
+/* Main */
+
+main {
+  flex: 1;
+  padding: var(--section-gap) 0 3rem;
+}
+
+main.container {
+  padding-top: calc(var(--section-gap) * 0.5);
+}
+
+/* Home */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+.hero .eyebrow {
+  color: var(--industrial-smoke);
+}
+
+.logo-frame {
+  position: relative;
+  width: min(100%, 18rem);
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  background: var(--surface-white);
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+
+.logo-frame .corner {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-color: var(--border);
+  border-style: solid;
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 0 1px;
+}
+
+.corner-tr {
+  top: 0;
+  right: 0;
+  border-width: 1px 1px 0 0;
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  border-width: 0 1px 1px 0;
+}
+
+.hero-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tagline .rule {
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--border);
+}
+
+.tagline .label-caps {
+  color: var(--industrial-smoke);
+}
+
+.hero .body-lg {
+  max-width: 32rem;
+  color: var(--secondary);
+}
+
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: min(100%, 24rem);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  padding: 0 2rem;
+  border: 1px solid var(--border);
+  background: var(--surface-white);
+  color: var(--primary);
+  font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.15s linear, color 0.15s linear;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--primary);
+  color: var(--on-primary);
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--industrial-smoke);
+  color: var(--on-primary);
+}
+
+.meta-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  width: 100%;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.meta-footer span {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--industrial-smoke);
+  opacity: 0.6;
+}
+
+.meta-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.meta-footer a:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* Legal */
+
+.legal-doc {
+  text-align: left;
+}
+
+.legal-eyebrow {
+  margin: 0 0 1.5rem;
+  color: var(--industrial-smoke);
+}
+
+.legal-doc h1 {
+  margin: 0 0 0.5rem;
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.legal-doc .meta {
+  margin: 0 0 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--industrial-smoke);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legal-doc h2 {
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.legal-doc h3 {
+  margin: 1.75rem 0 0.75rem;
+  font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.legal-doc p,
+.legal-doc li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--on-surface);
+}
+
+.legal-doc ul {
+  padding-left: 1.25rem;
+}
+
+.legal-doc li + li {
+  margin-top: 0.35rem;
+}
+
+.legal-doc hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.legal-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.875rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.legal-doc th,
+.legal-doc td {
+  border: 1px solid var(--border);
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-doc th {
+  background: var(--surface-container);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.legal-doc strong {
+  font-weight: 700;
+}
+
+.legal-doc a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--industrial-smoke);
+  text-underline-offset: 0.15em;
+}
+
+.legal-doc a:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+  text-decoration: none;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.5rem 0 2rem;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--industrial-smoke);
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container--wide {
+    width: min(100% - (var(--margin-desktop) * 2), var(--max-width));
+  }
+
+  .container--wide {
+    width: min(100% - (var(--margin-desktop) * 2), 72rem);
+  }
+
+  .headline-lg {
+    font-size: 3rem;
+  }
+
+  main.container {
+    padding-top: var(--section-gap);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-block: 0.5rem;
+    height: auto;
+    min-height: var(--header-height);
+  }
+
+  main {
+    padding-top: 3rem;
+  }
+
+  .cta-stack {
+    width: 100%;
+  }
+}

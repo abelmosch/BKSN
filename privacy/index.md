@@ -1,7 +1,17 @@
-# Bakasana — Privacy Policy
+---
+layout: default
+title: Privacy Policy
+description: How Bakasana collects, uses, stores, and protects your information.
+permalink: /privacy/
+---
 
-**Last updated:** June 11, 2026
-**Effective date:** June 11, 2026
+<div class="legal-doc" markdown="1">
+
+<p class="legal-eyebrow label-caps">Legal Archive / Privacy Protocol</p>
+
+# Privacy Policy
+
+<p class="meta"><strong>Last updated:</strong> June 11, 2026<br><strong>Effective date:</strong> June 11, 2026</p>
 
 Bakasana ("the App", "we", "us", "our") is a mobile balance-training application developed and operated by Bakasana. This Privacy Policy explains how we collect, use, store, and protect your information when you use our App on iOS or Android.
 
@@ -138,5 +148,7 @@ We may update this Privacy Policy from time to time. Material changes will be co
 
 If you have questions or concerns about this Privacy Policy, contact us at:
 
-**Email:** bakasana.app@gmail.com
-**Website:** [https://abelmosch.github.io/BKSN/privacy/](https://abelmosch.github.io/BKSN/privacy/)
+**Email:** bakasana.app@gmail.com  
+**Website:** [{{ site.url }}{{ site.baseurl }}/privacy/]({{ site.url }}{{ site.baseurl }}/privacy/)
+
+</div>
