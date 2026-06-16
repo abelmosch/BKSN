@@ -123,7 +123,7 @@ The App is not directed at children under 13 (or the applicable age in your juri
 Depending on your jurisdiction, you may have the following rights:
 
 - **Access and portability** — request a copy of the data we hold about you.
-- **Deletion** — request deletion of your data. For platform-stored data (Game Center, Play Games), you can manage or delete saved games through your device settings. For analytics and crash data, contact us and we will delete identifiable records where technically feasible.
+- **Deletion** — request deletion of your data. See our [Account & data deletion page]({{ '/delete-account/' | relative_url }}) for step-by-step instructions. For platform-stored data (Game Center, Play Games), you can also manage or delete saved games through your device settings. For analytics and crash data, contact us and we will delete identifiable records where technically feasible.
 - **Opt out of analytics** — you can limit Firebase Analytics data collection by enabling "Limit Ad Tracking" (iOS) or opting out of personalized ads (Android) in your device settings.
 - **Guest mode** — use the App without creating an account to minimize data collection.
 - **Withdraw consent** — uninstall the App at any time; locally stored data will be removed.
