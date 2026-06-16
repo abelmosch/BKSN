@@ -13,5 +13,3 @@ permalink: pretty
 exclude:
   - .gitignore
   - README.md
-  - privacy_policy.md
-  - terms_of_service.md

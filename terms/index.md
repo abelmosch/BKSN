@@ -11,7 +11,7 @@ permalink: /terms/
 
 # Terms of Service
 
-<p class="meta"><strong>Last updated:</strong> June 9, 2026<br><strong>Effective date:</strong> June 9, 2026</p>
+<p class="meta"><strong>Last updated:</strong> June 16, 2026<br><strong>Effective date:</strong> June 16, 2026</p>
 
 Please read these Terms of Service ("Terms") carefully before using the Bakasana mobile application ("the App", "Service") operated by Bakasana ("we", "us", "our").
 
@@ -169,7 +169,13 @@ These Terms, together with the [Privacy Policy]({{ '/privacy/' | relative_url }}
 
 ## 17. Changes to These Terms
 
-We reserve the right to modify these Terms at any time. Material changes will be communicated through the App or in release notes. The "Last updated" date at the top indicates the latest revision. Continued use of the App after changes constitutes acceptance of the updated Terms.
+We reserve the right to modify, amend, or replace these Terms **unilaterally and at our sole discretion** at any time, without your prior consent.
+
+- Updated Terms take effect when published at [{{ site.url }}{{ site.baseurl }}/terms/]({{ site.url }}{{ site.baseurl }}/terms/). The "Last updated" date at the top indicates the latest revision.
+- For **material changes**, we will make reasonable efforts to notify you through the App, release notes, or other appropriate means.
+- For **non-material changes** (such as clarifications, formatting, or minor updates), updating the published Terms and the "Last updated" date is sufficient notice.
+- **Continued use of the App after publication of updated Terms constitutes your acceptance** of the revised Terms.
+- If you do not agree to the updated Terms, you must stop using the App and uninstall it from your device.
 
 ---
 
