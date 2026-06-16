@@ -1,7 +1,7 @@
 # Bakasana — Terms of Service
 
-**Last updated:** June 9, 2026
-**Effective date:** June 9, 2026
+**Last updated:** June 16, 2026
+**Effective date:** June 16, 2026
 
 Please read these Terms of Service ("Terms") carefully before using the Bakasana mobile application ("the App", "Service") operated by Bakasana ("we", "us", "our").
 
@@ -159,7 +159,13 @@ These Terms, together with the [Privacy Policy](https://abelmosch.github.io/BKSN
 
 ## 17. Changes to These Terms
 
-We reserve the right to modify these Terms at any time. Material changes will be communicated through the App or in release notes. The "Last updated" date at the top indicates the latest revision. Continued use of the App after changes constitutes acceptance of the updated Terms.
+We reserve the right to modify, amend, or replace these Terms **unilaterally and at our sole discretion** at any time, without your prior consent.
+
+- Updated Terms take effect when published at [https://abelmosch.github.io/BKSN/terms/](https://abelmosch.github.io/BKSN/terms/). The "Last updated" date at the top indicates the latest revision.
+- For **material changes**, we will make reasonable efforts to notify you through the App, release notes, or other appropriate means.
+- For **non-material changes** (such as clarifications, formatting, or minor updates), updating the published Terms and the "Last updated" date is sufficient notice.
+- **Continued use of the App after publication of updated Terms constitutes your acceptance** of the revised Terms.
+- If you do not agree to the updated Terms, you must stop using the App and uninstall it from your device.
 
 ---
 
