@@ -11,7 +11,7 @@ permalink: /terms/
 
 # Terms of Service
 
-<p class="meta"><strong>Last updated:</strong> June 16, 2026<br><strong>Effective date:</strong> June 16, 2026</p>
+<p class="meta"><strong>Last updated:</strong> July 15, 2026<br><strong>Effective date:</strong> June 16, 2026</p>
 
 Please read these Terms of Service ("Terms") carefully before using the Bakasana mobile application ("the App", "Service") operated by Bakasana ("we", "us", "our").
 
@@ -23,11 +23,13 @@ By downloading, installing, or using the App, you agree to be bound by these Ter
 
 Bakasana is a mobile balance-training application available on iOS and Android. The App provides:
 
-- Guided practice programs (Bakasana, Plank, Shavasana)
+- Guided practice programs (Bakasana, Plank, Shavasana, and Flow)
 - A practice timer to track session duration
 - Progress tracking with statistics (streaks, totals, personal bests)
 - Leaderboard rankings via Apple Game Center (iOS) or Google Play Games (Android)
 - Shareable achievement cards
+- Optional on-device Practice Timeline capture and timelapse generation
+- Optional push notification reminders
 - Optional cloud sync of progress data through platform services
 
 ---
@@ -171,7 +173,7 @@ These Terms, together with the [Privacy Policy]({{ '/privacy/' | relative_url }}
 
 We reserve the right to modify, amend, or replace these Terms **unilaterally and at our sole discretion** at any time, without your prior consent.
 
-- Updated Terms take effect when published at [{{ site.url }}{{ site.baseurl }}/terms/]({{ site.url }}{{ site.baseurl }}/terms/). The "Last updated" date at the top indicates the latest revision.
+- Updated Terms take effect when published on the [Bakasana Terms of Service page]({{ '/terms/' | relative_url }}). The "Last updated" date at the top indicates the latest revision.
 - For **material changes**, we will make reasonable efforts to notify you through the App, release notes, or other appropriate means.
 - For **non-material changes** (such as clarifications, formatting, or minor updates), updating the published Terms and the "Last updated" date is sufficient notice.
 - **Continued use of the App after publication of updated Terms constitutes your acceptance** of the revised Terms.
@@ -184,6 +186,6 @@ We reserve the right to modify, amend, or replace these Terms **unilaterally and
 If you have questions about these Terms, contact us at:
 
 **Email:** bakasana.app@gmail.com  
-**Website:** [{{ site.url }}{{ site.baseurl }}/terms/]({{ site.url }}{{ site.baseurl }}/terms/)
+**Website:** [Bakasana Terms of Service]({{ '/terms/' | relative_url }})
 
 </div>

@@ -11,7 +11,7 @@ permalink: /privacy/
 
 # Privacy Policy
 
-<p class="meta"><strong>Last updated:</strong> June 16, 2026<br><strong>Effective date:</strong> June 16, 2026</p>
+<p class="meta"><strong>Last updated:</strong> July 15, 2026<br><strong>Effective date:</strong> June 16, 2026</p>
 
 Bakasana ("the App", "we", "us", "our") is a mobile balance-training application developed and operated by Bakasana. This Privacy Policy explains how we collect, use, store, and protect your information when you use our App on iOS or Android.
 
@@ -28,7 +28,7 @@ By downloading or using the App, you agree to this Privacy Policy. If you do not
 | **Platform player ID** (Game Center or Play Games) | When you sign in | Identify your account for cloud sync and leaderboards |
 | **Display name** | Automatically from your platform account | Shown on leaderboards |
 | **Body weight (kg)** (optional) | When you enter it in Profile settings | Estimate calories burned on share cards; stored locally only |
-| **Transformation film frames** (optional) | When you enable Transformation Film and complete qualifying holds | Build an on-device timelapse; stored locally only |
+| **Practice Timeline clips** (optional) | When you enable Practice Timeline and complete eligible practice sessions | Build an on-device timelapse; stored locally only |
 
 ### 1.2 Information Collected Automatically
 
@@ -39,20 +39,25 @@ By downloading or using the App, you agree to this Privacy Policy. If you do not
 | App usage events (launches, taps, practice completions, leaderboard views) | Firebase Analytics | Understand how the App is used and improve it |
 | Crash reports and diagnostic data | Firebase Crashlytics | Identify and fix bugs |
 | Device type, OS version, app version | Firebase Analytics / Crashlytics | Analytics and debugging context |
+| Push notification token and language topic | Firebase Cloud Messaging | Deliver optional practice reminders in your selected language |
 
-### 1.3 Optional Camera (Transformation Film)
+### 1.3 Optional Camera (Practice Timeline)
 
-If you enable **Transformation Film** in Profile settings, the App uses the device camera during practice to capture a single compressed photo per day per program when you hold a pose for more than four seconds. These frames are processed and stored **only on your device** to build a local timelapse video. They are **not transmitted to Bakasana servers**. You can disable the feature or delete all transformation data at any time in Profile settings.
+If you enable **Practice Timeline**, the App uses the device camera during eligible practice sessions to create short, silent video clips. Bakasana and Plank save a clip after qualifying holds of at least four seconds; Flow may save short clips at intervals during an active session. Shavasana does not use camera capture. Practice Timeline media is processed and stored **only on your device** to build a local timelapse video. It is **not transmitted to Bakasana servers**. You can disable the feature, review or delete individual clips, or delete all Practice Timeline media from the App.
 
-### 1.4 Information We Do NOT Collect
+### 1.4 Optional Notifications
+
+If you allow notifications, the App uses Firebase Cloud Messaging to receive practice reminders. A device notification token is managed by Firebase and subscribed to a language-specific broadcast topic. Bakasana does not maintain a separate server-side user profile linked to that token. You can disable notifications in the App or your device settings.
+
+### 1.5 Information We Do NOT Collect
 
 - Precise geolocation (GPS)
 - Microphone audio
-- Upload of your transformation film frames to Bakasana servers
+- Upload of your Practice Timeline clips to Bakasana servers
 - Contacts or address book
 - Payment or financial information
 - Email address (unless you voluntarily send us feedback)
-- Push notification tokens
+- Audio from Practice Timeline recordings
 - Health or fitness data from HealthKit or Google Fit
 - Advertising identifiers for ad targeting
 
@@ -62,8 +67,9 @@ If you enable **Transformation Film** in Profile settings, the App uses the devi
 
 We use the collected information to:
 
-- **Provide core functionality** — save your practice progress, display leaderboard rankings, generate share cards with your stats.
+- **Provide core functionality** — save your practice progress, display leaderboard rankings, generate share cards with your stats, and build your on-device Practice Timeline.
 - **Sync across devices** — store your progress blob in Game Center Saved Games (iOS) or Play Games Saved Games (Android) so you can resume on another device.
+- **Send optional reminders** — deliver broadcast practice notifications in your selected language when notifications are enabled.
 - **Improve the App** — analyze usage patterns and crash reports to fix bugs and prioritize features.
 - **Prompt for reviews** — after three completed sessions, we may show an in-app review prompt (once per app version, with a six-month cooldown).
 
@@ -76,9 +82,11 @@ We do **not** use your data for advertising, profiling, or selling to third part
 | Data type | Storage location | Encryption |
 |-----------|-----------------|------------|
 | Practice progress, preferences, body weight | On-device (`SharedPreferences`) | Protected by OS-level app sandbox |
+| Practice Timeline clips and generated videos | On-device app storage | Protected by OS-level app sandbox |
 | Cloud progress (signed-in users) | Apple Game Center / Google Play Games cloud save | Encrypted in transit (TLS); at rest per platform standards |
 | Analytics events | Firebase Analytics (Google Cloud) | Encrypted in transit and at rest per Google Cloud policies |
 | Crash reports | Firebase Crashlytics (Google Cloud) | Encrypted in transit and at rest per Google Cloud policies |
+| Notification token and topic subscription | Firebase Cloud Messaging | Encrypted in transit; retained according to Firebase service behavior |
 
 We retain analytics and crash data for the default Firebase retention periods (currently 14 months for Analytics, 90 days for Crashlytics). We do not maintain a separate user database.
 
@@ -92,6 +100,7 @@ The App integrates the following third-party services. Each service processes da
 |---------|----------|---------|----------------|
 | Firebase Analytics | Google LLC | Usage analytics | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Firebase Crashlytics | Google LLC | Crash reporting | [Google Privacy Policy](https://policies.google.com/privacy) |
+| Firebase Cloud Messaging | Google LLC | Optional practice reminders | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Apple Game Center | Apple Inc. | Authentication, cloud save, leaderboards (iOS) | [Apple Privacy Policy](https://www.apple.com/legal/privacy/) |
 | Google Play Games | Google LLC | Authentication, cloud save, leaderboards (Android) | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Google Fonts | Google LLC | Typography (Archivo Narrow) | [Google Fonts Privacy](https://developers.google.com/fonts/faq/privacy) |
@@ -142,7 +151,7 @@ Firebase services are operated by Google LLC and may process data in the United 
 
 We reserve the right to modify, amend, or replace this Privacy Policy **unilaterally and at our sole discretion** at any time, without your prior consent.
 
-- Updated policy takes effect when published at [{{ site.url }}{{ site.baseurl }}/privacy/]({{ site.url }}{{ site.baseurl }}/privacy/). The "Last updated" date at the top indicates the latest revision.
+- Updated policy takes effect when published on the [Bakasana Privacy Policy page]({{ '/privacy/' | relative_url }}). The "Last updated" date at the top indicates the latest revision.
 - For **material changes**, we will make reasonable efforts to notify you through the App, release notes, or other appropriate means.
 - For **non-material changes** (such as clarifications, formatting, or minor updates), updating the published policy and the "Last updated" date is sufficient notice.
 - **Continued use of the App after publication of an updated policy constitutes your acceptance** of the revised policy.
@@ -155,6 +164,6 @@ We reserve the right to modify, amend, or replace this Privacy Policy **unilater
 If you have questions or concerns about this Privacy Policy, contact us at:
 
 **Email:** bakasana.app@gmail.com  
-**Website:** [{{ site.url }}{{ site.baseurl }}/privacy/]({{ site.url }}{{ site.baseurl }}/privacy/)
+**Website:** [Bakasana Privacy Policy]({{ '/privacy/' | relative_url }})
 
 </div>

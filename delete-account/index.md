@@ -11,7 +11,7 @@ permalink: /delete-account/
 
 # Delete your Bakasana account and data
 
-<p class="meta"><strong>Last updated:</strong> June 16, 2026<br><strong>App:</strong> Bakasana (iOS and Android)</p>
+<p class="meta"><strong>Last updated:</strong> July 15, 2026<br><strong>App:</strong> Bakasana (iOS and Android)</p>
 
 Bakasana does **not** operate separate username/password accounts. When you sign in, the App uses your **Apple Game Center** (iOS) or **Google Play Games** (Android) identity. **Guest Mode** stores data only on your device.
 
@@ -29,7 +29,7 @@ This page explains how to delete data linked to your use of Bakasana.
 
 - Practice progress, streaks, and preferences stored locally
 - Optional body weight
-- Transformation Film frames and videos (if enabled)
+- Practice Timeline clips, posters, and generated videos (if enabled)
 - Legal acceptance and session preferences stored by the App
 
 **Not deleted by uninstall alone:**
@@ -81,7 +81,7 @@ We will respond within **30 days** and delete or anonymize identifiable analytic
 |------|--------------|-------|
 | Local practice progress & settings | Uninstall app | Immediate on device |
 | Body weight (optional) | Uninstall app | Never uploaded to Bakasana servers |
-| Transformation Film media | Uninstall app or disable/delete in Profile | Stored on device only |
+| Practice Timeline media | Uninstall app or delete clips/timeline data in the App | Stored on device only |
 | Play Games / Game Center saved progress | You remove via platform settings or our email request | Stored by Apple/Google |
 | Leaderboard scores | Managed by Apple/Google platform policies | May persist until removed in platform settings |
 | Firebase Analytics events | Email request + Google's retention cycle | Default retention ~**14 months** (Google) |
