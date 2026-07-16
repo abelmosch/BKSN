@@ -1,12 +1,13 @@
 :root {
-  --ink: #090909;
-  --ink-soft: #232323;
-  --paper: #f4f3ef;
+  --ink: #000000;
+  --ink-soft: #1a1c1c;
+  --paper: #f9f9f9;
   --white: #ffffff;
-  --smoke: #777774;
-  --line: #c9c8c2;
-  --line-dark: #3b3b3b;
-  --signal: #d8ff33;
+  --smoke: #808080;
+  --line: #cfc4c5;
+  --line-dark: #474747;
+  --surface-tint: #5e5e5e;
+  --inverse-primary: #c6c6c6;
   --header-height: 68px;
   --page-gutter: clamp(1rem, 4vw, 3.5rem);
   --section-space: clamp(5rem, 11vw, 9rem);
@@ -35,7 +36,7 @@ body {
   background: var(--paper);
   font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 body::before {
@@ -69,11 +70,11 @@ select {
 
 ::selection {
   color: var(--ink);
-  background: var(--signal);
+  background: var(--inverse-primary);
 }
 
 :focus-visible {
-  outline: 3px solid var(--signal);
+  outline: 3px solid var(--smoke);
   outline-offset: 4px;
 }
 
@@ -100,8 +101,8 @@ select {
   left: 0.75rem;
   z-index: 200;
   padding: 0.75rem 1rem;
-  color: var(--ink);
-  background: var(--signal);
+  color: var(--white);
+  background: var(--ink);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -121,7 +122,7 @@ select {
   z-index: 100;
   min-height: var(--header-height);
   color: var(--ink);
-  background: rgba(244, 243, 239, 0.96);
+  background: rgba(249, 249, 249, 0.96);
   border-bottom: 1px solid var(--ink);
   backdrop-filter: blur(12px);
 }
@@ -226,9 +227,22 @@ main {
   overflow: hidden;
   color: var(--white);
   background-color: var(--ink);
-  background-image: url("../images/event_challenges_onboarding.jpg");
-  background-position: center 60%;
-  background-size: cover;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0 0 0 42%;
+  z-index: -3;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .hero-shade {
@@ -289,8 +303,7 @@ main {
   height: 0.48rem;
   display: inline-block;
   border-radius: 50%;
-  background: var(--signal);
-  box-shadow: 0 0 0 3px rgba(216, 255, 51, 0.18);
+  background: currentColor;
 }
 
 .hero-platforms {
@@ -321,10 +334,10 @@ main {
 .hero h1 {
   max-width: 48rem;
   margin: 0;
-  font-size: clamp(3.75rem, 9.2vw, 8.5rem);
-  font-weight: 600;
-  line-height: 0.82;
-  letter-spacing: -0.045em;
+  font-size: clamp(3.75rem, 6.25vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
@@ -365,7 +378,12 @@ main {
 }
 
 .download-card--active:hover {
-  background: var(--signal);
+  color: var(--white);
+  background: var(--ink);
+}
+
+.download-card--active:hover .download-state {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .download-card--active .download-state {
@@ -400,7 +418,9 @@ main {
 }
 
 .hero-scroll:hover {
-  color: var(--signal);
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
 }
 
 /* Shared sections */
@@ -423,10 +443,10 @@ main {
 .section h2 {
   max-width: 50rem;
   margin: 0;
-  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  font-size: clamp(2.25rem, 4vw, 3rem);
   font-weight: 600;
-  line-height: 0.94;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
@@ -450,7 +470,7 @@ main {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   border-top: 1px solid var(--ink);
   border-left: 1px solid var(--ink);
 }
@@ -463,10 +483,11 @@ main {
   padding: clamp(1.4rem, 3vw, 2.25rem);
   border-right: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
+  grid-column: span 4;
 }
 
 .feature-card--wide {
-  grid-column: span 2;
+  grid-column: span 8;
 }
 
 .feature-card--dark {
@@ -485,9 +506,9 @@ main {
   max-width: 18rem;
   margin: auto 0 1rem;
   font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(2rem, 3vw, 3.15rem);
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 0.95;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -529,7 +550,7 @@ main {
 
 .program-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   border-top: 1px solid var(--line-dark);
   border-left: 1px solid var(--line-dark);
 }
@@ -541,6 +562,7 @@ main {
   padding: clamp(1.3rem, 2.5vw, 2rem);
   border-right: 1px solid var(--line-dark);
   border-bottom: 1px solid var(--line-dark);
+  grid-column: span 3;
 }
 
 .program-card--inverse {
@@ -562,9 +584,10 @@ main {
 .program-card h3 {
   margin: auto 0 1rem;
   font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: 3rem;
   font-weight: 600;
-  line-height: 0.9;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
@@ -601,10 +624,10 @@ main {
   max-width: 32rem;
   margin: 0;
   font-family: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(3rem, 6vw, 5.6rem);
+  font-size: clamp(2.25rem, 4vw, 3rem);
   font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   text-wrap: balance;
 }
@@ -648,7 +671,7 @@ main {
   justify-self: center;
   margin: 0;
   padding: 0.55rem;
-  background: #181818;
+  background: #1b1b1b;
   border: 1px solid var(--line-dark);
 }
 
@@ -798,7 +821,8 @@ main {
 }
 
 .text-link:hover {
-  background: var(--signal);
+  color: var(--white);
+  background: var(--ink);
 }
 
 /* Beta */
@@ -850,7 +874,8 @@ main {
 }
 
 .beta-platforms > a:hover {
-  color: var(--signal);
+  color: var(--ink);
+  background: var(--white);
 }
 
 .beta-platforms > div > span,
@@ -896,7 +921,7 @@ main {
 }
 
 .btn {
-  min-height: 3.5rem;
+  min-height: 3.75rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -913,11 +938,13 @@ main {
 .btn-primary {
   color: var(--white);
   background: var(--ink);
+  border: 0;
+  border-radius: 9999px;
 }
 
 .btn-primary:hover {
-  color: var(--ink);
-  background: var(--signal);
+  color: var(--white);
+  background: var(--surface-tint);
 }
 
 .support-email {
@@ -1069,20 +1096,20 @@ main {
 }
 
 .legal-doc th {
-  background: #e5e4df;
+  background: #e8e8e8;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.legal-doc a {
+.legal-doc a:not(.btn) {
   color: var(--ink);
   text-decoration-color: var(--smoke);
   text-underline-offset: 0.18em;
 }
 
-.legal-doc a:hover {
+.legal-doc a:not(.btn):hover {
   color: var(--white);
   background: var(--ink);
   text-decoration: none;
@@ -1146,7 +1173,9 @@ main {
 }
 
 .footer-links a:hover {
-  color: var(--signal);
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
 }
 
 .footer-meta {
@@ -1166,11 +1195,13 @@ main {
 @media (max-width: 980px) {
   .feature-grid,
   .program-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
+  .feature-card,
+  .program-card,
   .feature-card--wide {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   .section-heading--row,
@@ -1234,8 +1265,12 @@ main {
     padding-inline: 0.45rem;
   }
 
-  .hero {
-    background-position: 57% center;
+  .hero-media {
+    inset: 0;
+  }
+
+  .hero-image {
+    object-position: 56% center;
   }
 
   .hero-shade {
@@ -1254,7 +1289,7 @@ main {
   }
 
   .hero h1 {
-    font-size: clamp(3.6rem, 18vw, 5.4rem);
+    font-size: clamp(3.6rem, 16vw, 5rem);
   }
 
   .hero-actions {
@@ -1271,7 +1306,13 @@ main {
 
   .feature-grid,
   .program-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature-card,
+  .program-card,
+  .feature-card--wide {
+    grid-column: span 4;
   }
 
   .feature-card {
@@ -1342,4 +1383,5 @@ main {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+
 }
