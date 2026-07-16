@@ -59,7 +59,10 @@ BKSN/
 ├── assets/                Styles, images, video, and beta assets
 ├── delete-account/        Account and data deletion instructions
 ├── privacy/               Privacy Policy
+├── support/               Product and beta support
 ├── terms/                 Terms of Service
+├── robots.txt             Search-crawler access rules
+├── sitemap.xml            Production URL inventory
 ├── index.html             Product landing and support page
 └── _config.yml            Jekyll and GitHub Pages configuration
 ```
@@ -85,6 +88,7 @@ Generated output is written to `_site/`. The configured production site is [http
 ## Support and legal
 
 - [Support](mailto:bakasana.app@gmail.com)
+- [Support center](https://bakasana.app/support/)
 - [Privacy Policy](https://bakasana.app/privacy/)
 - [Terms of Service](https://bakasana.app/terms/)
 - [Delete account and data](https://bakasana.app/delete-account/)

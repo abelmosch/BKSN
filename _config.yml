@@ -2,6 +2,7 @@ title: Bakasana
 description: Guided yoga practice, progress tracking, and a private on-device Practice Timeline for iOS and Android.
 url: https://bakasana.app
 baseurl: ""
+production_url: https://bakasana.app
 
 markdown: kramdown
 kramdown:

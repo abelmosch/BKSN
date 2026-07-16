@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% assign meta_description = page.description | default: site.description %}
+  {% assign social_title = page.social_title | default: page.seo_title | default: page.title | default: site.title %}
+  {% assign social_description = page.social_description | default: meta_description %}
+  {% assign canonical_url = site.production_url | append: page.url %}
+  {% assign social_image_url = site.production_url | append: '/assets/og/bakasana-preview.jpg' %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
+  <meta name="author" content="Bakasana">
   <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Bakasana">
+  <meta property="og:title" content="{{ social_title }}">
+  <meta property="og:description" content="{{ social_description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ social_image_url }}">
+  <meta property="og:image:secure_url" content="{{ social_image_url }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bakasana yoga practice app and community">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ social_title }}">
+  <meta name="twitter:description" content="{{ social_description }}">
+  <meta name="twitter:image" content="{{ social_image_url }}">
+  <meta name="twitter:image:alt" content="Bakasana yoga practice app and community">
+
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  {% if page.url == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "@id": "https://bakasana.app/#app",
+    "name": "Bakasana",
+    "url": "https://bakasana.app/",
+    "description": "A yoga practice and progress-tracking app with guided sessions, streaks, a private on-device Practice Timeline, sharing, and leaderboards.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS",
+    "softwareVersion": "2.2.3",
+    "image": "https://bakasana.app/assets/og/bakasana-preview.jpg",
+    "logo": "https://bakasana.app/assets/images/logo.png",
+    "downloadUrl": "https://testflight.apple.com/join/r7A2STTS",
+    "author": {
+      "@type": "Organization",
+      "name": "Bakasana",
+      "url": "https://bakasana.app/",
+      "logo": "https://bakasana.app/assets/images/logo.png"
+    }
+  }
+  </script>
+  {% endif %}
 </head>
 <body{% if page.url == '/' %} class="home-page"{% endif %}>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -17,7 +72,7 @@
   <header class="site-header">
     <div class="container container--wide header-inner">
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="Bakasana home">
-        <span class="brand-mark" aria-hidden="true">b</span>
+        <img class="brand-mark" src="{{ '/assets/images/logo.png' | relative_url }}" width="512" height="512" alt="">
         <span class="brand-name">Bakasana</span>
         <span class="brand-status">Beta</span>
       </a>
@@ -25,7 +80,7 @@
         <a href="{{ '/#features' | relative_url }}">Features</a>
         <a href="{{ '/#programs' | relative_url }}">Programs</a>
         <a href="{{ '/#beta' | relative_url }}">Beta</a>
-        <a href="{{ '/#support' | relative_url }}">Support</a>
+        <a href="{{ '/support/' | relative_url }}"{% if page.url contains '/support' %} aria-current="page"{% endif %}>Support</a>
       </nav>
     </div>
   </header>
@@ -37,7 +92,7 @@
   <footer class="site-footer">
     <div class="container container--wide footer-grid">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">b</span>
+        <img class="brand-mark" src="{{ '/assets/images/logo.png' | relative_url }}" width="512" height="512" alt="">
         <div>
           <p class="footer-name">Bakasana</p>
           <p>Find your balance. Return to practice.</p>
@@ -47,7 +102,7 @@
         <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
         <a href="{{ '/terms/' | relative_url }}">Terms</a>
         <a href="{{ '/delete-account/' | relative_url }}">Delete account</a>
-        <a href="mailto:bakasana.app@gmail.com">Support</a>
+        <a href="{{ '/support/' | relative_url }}">Support</a>
       </nav>
       <div class="footer-meta">
         <span>iOS Beta / Android coming soon</span>
