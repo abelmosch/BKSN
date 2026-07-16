@@ -1,7 +1,7 @@
 title: Bakasana
 description: Guided yoga practice, progress tracking, and a private on-device Practice Timeline for iOS and Android.
-url: https://abelmosch.github.io
-baseurl: /BKSN
+url: https://bakasana.app
+baseurl: ""
 
 markdown: kramdown
 kramdown:
