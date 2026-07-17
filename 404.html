@@ -1,0 +1,45 @@
+---
+layout: default
+title: Page Not Found
+seo_title: Page Not Found — Bakasana
+description: The requested Bakasana page could not be found. Return to the app homepage or visit support.
+permalink: /404.html
+robots: noindex, follow
+---
+
+<section class="not-found" aria-labelledby="not-found-title">
+  <p class="not-found-code" aria-hidden="true">404</p>
+  <div class="not-found-copy">
+    <p class="legal-eyebrow label-caps">Lost your balance?</p>
+    <h1 id="not-found-title">This page is out of pose.</h1>
+    <p>The link may be outdated, or the page may have moved. Return to Bakasana or use one of the routes below.</p>
+
+    <div class="not-found-actions">
+      <a class="btn btn-primary" href="{{ '/' | relative_url }}">Return home</a>
+      <a class="btn btn-outline" href="{{ '/support/' | relative_url }}">Get support</a>
+    </div>
+  </div>
+
+  <nav class="not-found-routes" aria-label="Helpful pages">
+    <a href="{{ '/#features' | relative_url }}">
+      <span class="label-caps">Explore</span>
+      <strong>Features</strong>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+    <a href="{{ '/#programs' | relative_url }}">
+      <span class="label-caps">Practice</span>
+      <strong>Programs</strong>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+    <a href="{{ '/#beta' | relative_url }}">
+      <span class="label-caps">Test</span>
+      <strong>iPhone Beta</strong>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+    <a href="mailto:bakasana.app@gmail.com">
+      <span class="label-caps">Contact</span>
+      <strong>Email us</strong>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  </nav>
+</section>
