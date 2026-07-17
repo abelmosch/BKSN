@@ -231,7 +231,7 @@ main {
 
 .hero-media {
   position: absolute;
-  inset: 0 0 0 42%;
+  inset: 0 0 0 48%;
   z-index: -3;
   overflow: hidden;
   background: var(--ink);
@@ -242,7 +242,7 @@ main {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center 70%;
 }
 
 .hero-shade {
@@ -312,7 +312,7 @@ main {
 }
 
 .hero-copy {
-  max-width: 51rem;
+  max-width: 34rem;
   align-self: center;
   padding-block: 4rem 2rem;
 }
@@ -332,7 +332,7 @@ main {
 }
 
 .hero h1 {
-  max-width: 48rem;
+  max-width: 34rem;
   margin: 0;
   font-size: clamp(3.75rem, 6.25vw, 5rem);
   font-weight: 700;
@@ -342,7 +342,7 @@ main {
 }
 
 .hero-lede {
-  max-width: 38rem;
+  max-width: 34rem;
   margin: clamp(1.75rem, 4vw, 3rem) 0 0;
   color: rgba(255, 255, 255, 0.84);
   font-size: clamp(1rem, 2vw, 1.3rem);
@@ -350,7 +350,7 @@ main {
 }
 
 .hero-actions {
-  width: min(100%, 38rem);
+  width: min(100%, 34rem);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
