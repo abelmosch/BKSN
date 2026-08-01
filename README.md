@@ -55,32 +55,37 @@ This repository contains the public Bakasana promotional, support, privacy, and 
 
 ```text
 BKSN/
+├── .github/workflows/     GitHub Actions deploy (Jekyll 4 → Pages)
 ├── _layouts/              Shared page layout
 ├── assets/                Styles, images, video, and beta assets
 ├── delete-account/        Account and data deletion instructions
 ├── privacy/               Privacy Policy
 ├── support/               Product and beta support
 ├── terms/                 Terms of Service
+├── Gemfile                Jekyll 4.4.1 dependencies
 ├── robots.txt             Search-crawler access rules
 ├── sitemap.xml            Production URL inventory
 ├── index.html             Product landing and support page
-└── _config.yml            Jekyll and GitHub Pages configuration
+└── _config.yml            Jekyll configuration
 ```
 
 ### Run locally
 
-With Jekyll installed:
+Requires Ruby 3.2+ and Bundler. Install gems once, then serve:
 
 ```bash
-jekyll serve --host 127.0.0.1 --port 4000
+bundle install
+bundle exec jekyll serve --host 127.0.0.1 --port 4000
 ```
 
 Open [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Jekyll automatically rebuilds the site when source files change.
 
+The site is built with **Jekyll 4.4.1** both locally and on GitHub Actions (GitHub Pages legacy builder is pinned to Jekyll 3.10 and is not used).
+
 ### Production build
 
 ```bash
-JEKYLL_ENV=production jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 ```
 
 Generated output is written to `_site/`. The configured production site is [https://bakasana.app/](https://bakasana.app/).
