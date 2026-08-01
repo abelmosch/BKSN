@@ -6,6 +6,7 @@
   {% assign social_description = page.social_description | default: meta_description %}
   {% assign canonical_url = site.production_url | append: page.url %}
   {% assign social_image_url = site.production_url | append: '/assets/og/bakasana-preview.jpg' %}
+  {% assign enabled_social_links = site.social_links | where_exp: 'social', 'social.enabled and social.url' %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -51,10 +52,16 @@
     "url": "https://bakasana.app/",
     "description": "A yoga practice and progress-tracking app with guided sessions, streaks, a private on-device Practice Timeline, sharing, and leaderboards.",
     "applicationCategory": "HealthApplication",
-    "operatingSystem": "iOS",
-    "softwareVersion": "2.2.3",
+    "operatingSystem": "iOS, Android",
+    "softwareVersion": "{{ site.app.version }}",
     "image": "https://bakasana.app/assets/og/bakasana-preview.jpg",
-    "downloadUrl": "https://testflight.apple.com/join/r7A2STTS",
+    "downloadUrl": [
+      "{{ site.app.beta.ios.join_url }}",
+      "{{ site.app.beta.android.join_url }}"
+    ],
+    "sameAs": [
+      {% for social in enabled_social_links %}"{{ social.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+    ],
     "author": {
       "@type": "Organization",
       "name": "Bakasana",
@@ -103,8 +110,16 @@
         <a href="{{ '/delete-account/' | relative_url }}">Delete account</a>
         <a href="{{ '/support/' | relative_url }}">Support</a>
       </nav>
+      {% if enabled_social_links.size > 0 %}
+      <nav class="footer-social" aria-label="Social media">
+        <p class="footer-nav-title">Follow Bakasana</p>
+        {% for social in enabled_social_links %}
+          <a href="{{ social.url }}" target="_blank" rel="me noopener noreferrer" aria-label="Follow Bakasana on {{ social.name }}; opens in a new tab">{{ social.name }} <span aria-hidden="true">↗</span></a>
+        {% endfor %}
+      </nav>
+      {% endif %}
       <div class="footer-meta">
-        <span>iOS Beta / Android coming soon</span>
+        <span>iOS + Android Beta / Version {{ site.app.version }} / Build {{ site.app.build }}</span>
         <span>&copy; {{ site.time | date: '%Y' }} Bakasana Lab</span>
       </div>
     </div>

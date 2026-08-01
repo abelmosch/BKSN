@@ -4,6 +4,31 @@ url: https://bakasana.app
 baseurl: ""
 production_url: https://bakasana.app
 
+app:
+  version: 2.2.5
+  build: 42
+  beta:
+    ios:
+      join_url: https://testflight.apple.com/join/r7A2STTS
+    android:
+      join_url: https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app
+      web_join_url: https://play.google.com/apps/testing/com.bakasana.bakasana_app
+
+social_links:
+  - id: instagram
+    name: Instagram
+    link_text: "@bakasana.app"
+    url: https://www.instagram.com/bakasana.app/
+    enabled: true
+  - id: youtube
+    name: YouTube
+    url:
+    enabled: false
+  - id: threads
+    name: Threads
+    url:
+    enabled: false
+
 markdown: kramdown
 kramdown:
   input: GFM

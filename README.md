@@ -6,9 +6,9 @@
   <img src="assets/images/event_challenges_onboarding.jpg" width="520" alt="The Bakasana practice community at an outdoor yoga event">
 </p>
 
-> **Current status:** Beta testing · iOS available through TestFlight · Android coming soon
+> **Current status:** Beta testing · iOS available through TestFlight · Android available through Google Play testing
 
-[Visit the website](https://bakasana.app/) · [Join the iOS beta](https://testflight.apple.com/join/r7A2STTS) · [Contact support](mailto:bakasana.app@gmail.com)
+[Visit the website](https://bakasana.app/) · [Follow on Instagram](https://www.instagram.com/bakasana.app/) · [Join the iOS beta](https://testflight.apple.com/join/r7A2STTS) · [Join the Android beta](https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app) · [Contact support](mailto:bakasana.app@gmail.com)
 
 ## About Bakasana
 
@@ -45,9 +45,9 @@ Read the full [Privacy Policy](https://bakasana.app/privacy/) and [account delet
 | Platform | Status | Access |
 | --- | --- | --- |
 | iPhone | Beta testing | [Join with Apple TestFlight](https://testflight.apple.com/join/r7A2STTS) |
-| Android | Beta testing | Download link coming soon |
+| Android | Beta testing | [Join with Google Play on Android](https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app) or [join on the web](https://play.google.com/apps/testing/com.bakasana.bakasana_app) |
 
-The current website reflects app version **2.2.3, build 32**.
+The current website reflects app version **2.2.5, build 42**.
 
 ## This repository
 
@@ -89,6 +89,7 @@ Generated output is written to `_site/`. The configured production site is [http
 
 - [Support](mailto:bakasana.app@gmail.com)
 - [Support center](https://bakasana.app/support/)
+- [Instagram](https://www.instagram.com/bakasana.app/)
 - [Privacy Policy](https://bakasana.app/privacy/)
 - [Terms of Service](https://bakasana.app/terms/)
 - [Delete account and data](https://bakasana.app/delete-account/)

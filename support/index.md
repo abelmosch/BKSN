@@ -21,7 +21,14 @@ Need help with the beta, your account, or a practice session? Email **bakasana.a
 
 ## Beta access
 
-The iPhone beta is available through [Apple TestFlight](https://testflight.apple.com/join/r7A2STTS). The Android build remains in testing, and its download link will be published when ready.
+The iPhone beta is available through [Apple TestFlight]({{ site.app.beta.ios.join_url }}).
+
+Android testers can join in either of these ways:
+
+- [Join through Google Play on Android]({{ site.app.beta.android.join_url }})
+- [Join the Android test on the web]({{ site.app.beta.android.web_join_url }})
+
+The current beta is version **{{ site.app.version }}**, build **{{ site.app.build }}**.
 
 ## What to include in a support request
 
@@ -69,5 +76,10 @@ Follow the [account and data deletion instructions]({{ '/delete-account/' | rela
 
 **Email:** [bakasana.app@gmail.com](mailto:bakasana.app@gmail.com)  
 **Website:** [Bakasana Support]({{ '/support/' | relative_url }})
+
+{% assign enabled_social_links = site.social_links | where_exp: 'social', 'social.enabled and social.url' %}
+{% for social in enabled_social_links %}
+**{{ social.name }}:** [{{ social.link_text | default: social.name }}]({{ social.url }}){: target="_blank" rel="me noopener noreferrer" }
+{% endfor %}
 
 </div>

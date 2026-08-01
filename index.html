@@ -3,8 +3,8 @@ layout: default
 title: Bakasana
 seo_title: Bakasana — Yoga Practice & Progress Tracker
 social_title: Bakasana — Make yoga the habit you want to return to
-description: Bakasana is a yoga practice app for guided sessions, streak tracking, a private Practice Timeline, sharing, and leaderboards. Join the iPhone beta.
-social_description: Guided yoga practice, honest progress tracking, and a private visual timeline. Join the Bakasana iPhone beta.
+description: Bakasana is a yoga practice app for guided sessions, streak tracking, a private Practice Timeline, sharing, and leaderboards. Join the iPhone or Android beta.
+social_description: Guided yoga practice, honest progress tracking, and a private visual timeline. Join the Bakasana beta on iPhone or Android.
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -17,7 +17,7 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
   <div class="hero-inner container container--wide">
     <div class="hero-topline">
       <p class="status-pill"><span class="status-dot"></span>Beta testing</p>
-      <p class="label-caps hero-platforms">iOS + Android / Version 2.2.3 / Build 32</p>
+      <p class="label-caps hero-platforms">iOS + Android / Version {{ site.app.version }} / Build {{ site.app.build }}</p>
     </div>
 
     <div class="hero-copy">
@@ -27,14 +27,14 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
     </div>
 
     <div class="hero-actions" aria-label="App availability">
-      <a class="download-card download-card--active" href="https://testflight.apple.com/join/r7A2STTS" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana iPhone beta on TestFlight; opens in a new tab">
+      <a class="download-card download-card--active" href="{{ site.app.beta.ios.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana iPhone beta on TestFlight; opens in a new tab">
         <span class="download-platform">iPhone</span>
         <span class="download-state">Join TestFlight <span aria-hidden="true">↗</span></span>
       </a>
-      <div class="download-card" aria-label="Bakasana for Android, coming soon">
+      <a class="download-card download-card--active" href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana Android beta on Google Play; opens in a new tab">
         <span class="download-platform">Android</span>
-        <span class="download-state">Coming soon</span>
-      </div>
+        <span class="download-state">Join beta <span aria-hidden="true">↗</span></span>
+      </a>
     </div>
 
     <a class="hero-scroll label-caps" href="#features">Explore the beta <span aria-hidden="true">↓</span></a>
@@ -140,7 +140,7 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
           <source src="{{ '/assets/video/intro_en.mp4' | relative_url }}" type="video/mp4">
           Your browser does not support embedded video.
         </video>
-        <figcaption><span>Beta walkthrough</span><span>2.2.3 / Build 32</span></figcaption>
+        <figcaption><span>Beta walkthrough</span><span>{{ site.app.version }} / Build {{ site.app.build }}</span></figcaption>
       </figure>
     </div>
   </div>
@@ -181,10 +181,10 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
     <div class="beta-copy">
       <p>We are testing the current iOS and Android builds, improving the practice flow, and preparing the public release.</p>
       <div class="beta-platforms" aria-label="Download availability">
-        <a href="https://testflight.apple.com/join/r7A2STTS" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana iOS beta on TestFlight; opens in a new tab"><span>iOS</span><strong>Join TestFlight <span aria-hidden="true">↗</span></strong></a>
-        <div><span>Android</span><strong>Coming soon</strong></div>
+        <a href="{{ site.app.beta.ios.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana iOS beta on TestFlight; opens in a new tab"><span>iOS</span><strong>Join TestFlight <span aria-hidden="true">↗</span></strong></a>
+        <a href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana Android beta on Google Play; opens in a new tab"><span>Android</span><strong>Join Google Play <span aria-hidden="true">↗</span></strong></a>
       </div>
-      <p class="beta-note label-caps">iOS beta available now / Android link coming soon.</p>
+      <p class="beta-note beta-note--links label-caps">Android testers can <a href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer">join on Android</a> or <a href="{{ site.app.beta.android.web_join_url }}" target="_blank" rel="noopener noreferrer">join on the web</a>.</p>
     </div>
   </div>
 </section>
@@ -202,11 +202,11 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
     <div class="faq-list">
       <details>
         <summary>When can I download Bakasana?<span aria-hidden="true">+</span></summary>
-        <p>The iOS beta is available now through <a href="https://testflight.apple.com/join/r7A2STTS" target="_blank" rel="noopener noreferrer">Apple TestFlight</a>. The Android download link will be added when it is ready.</p>
+        <p>The iOS beta is available through <a href="{{ site.app.beta.ios.join_url }}" target="_blank" rel="noopener noreferrer">Apple TestFlight</a>. Android testers can <a href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer">join through Google Play on Android</a> or <a href="{{ site.app.beta.android.web_join_url }}" target="_blank" rel="noopener noreferrer">join on the web</a>.</p>
       </details>
       <details>
         <summary>Which devices are supported?<span aria-hidden="true">+</span></summary>
-        <p>The current iPhone beta is distributed through TestFlight, and the Android build remains in testing. Final compatibility details will accompany the public release.</p>
+        <p>The current iPhone beta is distributed through TestFlight, and the Android beta through Google Play. Final compatibility details will accompany the public release.</p>
       </details>
       <details>
         <summary>Do I need to create an account?<span aria-hidden="true">+</span></summary>
