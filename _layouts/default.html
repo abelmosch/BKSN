@@ -6,7 +6,7 @@
   {% assign social_description = page.social_description | default: meta_description %}
   {% assign canonical_url = site.production_url | append: page.url %}
   {% assign social_image_url = site.production_url | append: '/assets/og/bakasana-preview.jpg' %}
-  {% assign enabled_social_links = site.social_links | where_exp: 'social', 'social.enabled and social.url' %}
+  {% assign enabled_social_links = site.social_links | where: 'enabled', true %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>

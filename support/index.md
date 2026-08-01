@@ -77,7 +77,7 @@ Follow the [account and data deletion instructions]({{ '/delete-account/' | rela
 **Email:** [bakasana.app@gmail.com](mailto:bakasana.app@gmail.com)  
 **Website:** [Bakasana Support]({{ '/support/' | relative_url }})
 
-{% assign enabled_social_links = site.social_links | where_exp: 'social', 'social.enabled and social.url' %}
+{% assign enabled_social_links = site.social_links | where: 'enabled', true %}
 {% for social in enabled_social_links %}
 **{{ social.name }}:** [{{ social.link_text | default: social.name }}]({{ social.url }}){: target="_blank" rel="me noopener noreferrer" }
 {% endfor %}
