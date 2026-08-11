@@ -727,81 +727,6 @@ main {
   gap: clamp(2.5rem, 8vw, 7rem);
 }
 
-.timeline-visual {
-  position: relative;
-  min-height: 35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--white);
-  background: var(--ink);
-}
-
-.timeline-visual::before,
-.timeline-visual::after {
-  content: "";
-  position: absolute;
-  border: 1px solid var(--line-dark);
-  border-radius: 50%;
-}
-
-.timeline-visual::before {
-  width: 28rem;
-  height: 28rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.timeline-visual::after {
-  width: 17rem;
-  height: 17rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.film-strip {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--line-dark);
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.timeline-mark {
-  position: relative;
-  z-index: 1;
-  align-self: center;
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 7vw, 6rem);
-  font-weight: 600;
-  line-height: 0.83;
-  letter-spacing: -0.04em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.timeline-visual > p {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .timeline-copy {
   align-self: center;
 }
@@ -1594,10 +1519,6 @@ main {
     min-height: auto;
   }
 
-  .timeline-visual {
-    min-height: 27rem;
-  }
-
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -1642,10 +1563,6 @@ main {
 
   .site-nav a {
     font-size: 0.62rem;
-  }
-
-  .film-strip {
-    gap: 0.5rem;
   }
 
   .faq-list summary {
