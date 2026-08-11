@@ -1,0 +1,29 @@
+en:
+  skip: Skip to content
+  nav:
+    about: About
+    support: Support
+  lang_switch: RU
+  lang_switch_aria: Switch to Russian
+  footer_explore: Explore
+  footer_social: Follow Bakasana
+  footer_version: "iOS + Android / Version"
+  cta_ios_platform: iPhone
+  cta_ios: Download on the App Store
+  cta_android_platform: Android
+  cta_android: Get it on Google Play
+
+ru:
+  skip: Перейти к содержанию
+  nav:
+    about: О приложении
+    support: Поддержка
+  lang_switch: EN
+  lang_switch_aria: Переключить на английский
+  footer_explore: Разделы
+  footer_social: Bakasana в соцсетях
+  footer_version: "iOS + Android / Версия"
+  cta_ios_platform: iPhone
+  cta_ios: Скачать в App Store
+  cta_android_platform: Android
+  cta_android: Скачать в Google Play

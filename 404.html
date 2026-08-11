@@ -5,6 +5,7 @@ seo_title: Page Not Found — Bakasana
 description: The requested Bakasana page could not be found. Return to the app homepage or visit support.
 permalink: /404.html
 robots: noindex, follow
+sitemap: false
 ---
 
 <section class="not-found" aria-labelledby="not-found-title">
@@ -21,9 +22,9 @@ robots: noindex, follow
   </div>
 
   <nav class="not-found-routes" aria-label="Helpful pages">
-    <a href="{{ '/#features' | relative_url }}">
-      <span class="label-caps">Explore</span>
-      <strong>Features</strong>
+    <a href="{{ '/about/' | relative_url }}">
+      <span class="label-caps">About</span>
+      <strong>Bakasana</strong>
       <span aria-hidden="true">&rarr;</span>
     </a>
     <a href="{{ '/#programs' | relative_url }}">
@@ -31,14 +32,14 @@ robots: noindex, follow
       <strong>Programs</strong>
       <span aria-hidden="true">&rarr;</span>
     </a>
-    <a href="{{ '/#beta' | relative_url }}">
-      <span class="label-caps">Test</span>
-      <strong>iPhone Beta</strong>
+    <a href="{{ '/#download' | relative_url }}">
+      <span class="label-caps">Download</span>
+      <strong>Get the app</strong>
       <span aria-hidden="true">&rarr;</span>
     </a>
-    <a href="mailto:bakasana.app@gmail.com">
-      <span class="label-caps">Contact</span>
-      <strong>Email us</strong>
+    <a href="{{ '/support/' | relative_url }}">
+      <span class="label-caps">Help</span>
+      <strong>Support</strong>
       <span aria-hidden="true">&rarr;</span>
     </a>
   </nav>

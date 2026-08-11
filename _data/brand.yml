@@ -1,0 +1,31 @@
+en:
+  short_pitch: "Bakasana is a mobile yoga practice companion for iPhone and Android, built to help people practice consistently, track progress, and see their transformation over time."
+  slogan: "Build a yoga practice you want to return to"
+  closing: "Find your balance. Return to practice."
+  what_title: "What is Bakasana?"
+  what_lede: "Bakasana is a mobile yoga practice companion—not a web trainer, not a sequence builder, and not an app for a single pose. It brings balance, strength, free practice, recovery, and progress into one focused place."
+  expert_teaser: "Bakasana’s practice philosophy is shaped by yoga trainer and product visionary Alena Tkacheva."
+
+ru:
+  short_pitch: "Bakasana — мобильное приложение и ваш напарник для регулярной йога-практики на iPhone и Android. Оно помогает заниматься последовательно, отслеживать прогресс и видеть изменения со временем."
+  long_pitch: "Выбирайте занятия, отслеживайте прогресс, сохраняйте историю и замечайте, как шаг за шагом практика становится частью вашей жизни."
+  slogan: "Возвращайтесь к практике снова и снова."
+  closing: "Найдите баланс. Возвращайтесь к практике."
+  h1: "Bakasana — твой напарник в регулярной практике."
+  what_title: "Bakasana — приложение для тех, кто хочет сделать йогу регулярной частью своей жизни."
+  what_lede: "Здесь не нужно составлять сложные последовательности и не нужно заниматься только ради одной позы. Практикуйте в своём ритме, развивайте силу и баланс, восстанавливайтесь и наблюдайте за своим прогрессом — всё в одном месте."
+  expert_teaser: "Философию практики Bakasana формирует тренер по йоге и продуктовый визионер Алёна Ткачева."
+
+expert:
+  name: Alena Tkacheva
+  name_ru: Алёна Ткачева
+  job_title: Yoga Trainer and Product Visionary
+  job_title_ru: Практик йоги и тренер, продуктовый визионер
+  bio_short: "Alena Tkacheva is a yoga practitioner and trainer, the inspiration behind Bakasana, and the app’s product visionary."
+  bio_short_ru: "Алёна Ткачева — практик йоги и тренер, идейный вдохновитель и продуктовый визионер Bakasana."
+  bio_long: "She shaped how Bakasana treats regular practice: the four programs stay complementary—balance, strength, free movement, and recovery—and progress tracking stays honest, private, and useful over time. As product visionary, she keeps the app a practice companion rather than a workout gimmick or sequence machine."
+  bio_long_ru: "Она сформировала подход Bakasana к регулярной практике: четыре программы остаются взаимодополняющими — баланс, сила, свободное движение и восстановление, — а отслеживание прогресса честным, приватным и полезным со временем. Как продуктовый визионер, она помогает Bakasana оставаться напарником для регулярной практики, а не приложением с трюками для тренировок или автоматически собранными последовательностями."
+  photo: "/assets/images/program_bakasana_onboarding.jpg"
+  instagram: "https://www.instagram.com/aly.yogaa/"
+  youtube: "https://www.youtube.com/@DaYogaAlena"
+  about_anchor: alena-tkacheva

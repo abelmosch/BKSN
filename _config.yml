@@ -1,18 +1,20 @@
 title: Bakasana
-description: Guided yoga practice, progress tracking, and a private on-device Practice Timeline for iOS and Android.
+description: Bakasana is a mobile yoga practice companion for iPhone and Android, built to help people practice consistently, track progress, and see their transformation over time.
+description_ru: Bakasana — мобильное приложение и ваш напарник для регулярной йога-практики на iPhone и Android. Оно помогает заниматься последовательно, отслеживать прогресс и видеть изменения со временем.
 url: https://bakasana.app
 baseurl: ""
 production_url: https://bakasana.app
 
 app:
-  version: 2.2.5
-  build: 42
-  beta:
+  version: 2.2.6
+  build: 44
+  category: HealthApplication
+  operating_systems: "iOS, Android"
+  stores:
     ios:
-      join_url: https://testflight.apple.com/join/r7A2STTS
+      url: https://apps.apple.com/app/bakasana/id6776696295
     android:
-      join_url: https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app
-      web_join_url: https://play.google.com/apps/testing/com.bakasana.bakasana_app
+      url: https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app
 
 social_links:
   - id: instagram

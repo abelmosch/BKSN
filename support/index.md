@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Support
-description: Get help with the Bakasana beta, practice programs, accounts, leaderboards, reminders, and the private Practice Timeline.
+description: Get help with the Bakasana app, practice programs, accounts, leaderboards, reminders, and the private Practice Timeline.
 permalink: /support/
+last_modified_at: 2026-08-10
 ---
 
 <div class="legal-doc support-doc" markdown="1">
@@ -11,24 +12,25 @@ permalink: /support/
 
 # Support
 
-<p class="meta"><strong>App:</strong> Bakasana (iOS and Android)<br><strong>Status:</strong> Beta testing</p>
+<p class="meta"><strong>App:</strong> Bakasana (iOS and Android)<br><strong>Status:</strong> Publicly available</p>
 
-Need help with the beta, your account, or a practice session? Email **bakasana.app@gmail.com**. We read beta feedback and use it to improve the app.
+Need help with the app, your account, or a practice session? Email **bakasana.app@gmail.com**. We read feedback and use it to improve Bakasana.
 
 [Email Bakasana support](mailto:bakasana.app@gmail.com){: .btn .btn-primary }
 
 ---
 
-## Beta access
+## Download Bakasana
 
-The iPhone beta is available through [Apple TestFlight]({{ site.app.beta.ios.join_url }}).
+- [Download Bakasana on the App Store]({{ site.app.stores.ios.url }})
+- [Get Bakasana on Google Play]({{ site.app.stores.android.url }})
 
-Android testers can join in either of these ways:
+The current public release is version **{{ site.app.version }}**.
 
-- [Join through Google Play on Android]({{ site.app.beta.android.join_url }})
-- [Join the Android test on the web]({{ site.app.beta.android.web_join_url }})
+## Compatibility
 
-The current beta is version **{{ site.app.version }}**, build **{{ site.app.build }}**.
+- iPhone and iPad: **iOS 16.6 or later**
+- Android phones and tablets: **Android 7.0 or later**
 
 ## What to include in a support request
 

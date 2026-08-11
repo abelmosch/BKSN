@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /download/
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Download Bakasana</title>
+  <script>
+    (function () {
+      var iosUrl = {{ site.app.stores.ios.url | jsonify }};
+      var androidUrl = {{ site.app.stores.android.url | jsonify }};
+      var userAgent = navigator.userAgent || '';
+      var isIPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+      var isIOS = /iPhone|iPad|iPod/i.test(userAgent) || isIPadOS;
+      var isAndroid = /Android/i.test(userAgent);
+      var isRussian = /^ru(?:-|$)/i.test(navigator.language || '');
+      var fallbackUrl = isRussian ? {{ '/ru/#download' | absolute_url | jsonify }} : {{ '/#download' | absolute_url | jsonify }};
+
+      window.location.replace(isIOS ? iosUrl : isAndroid ? androidUrl : fallbackUrl);
+    }());
+  </script>
+</head>
+<body>
+  <p>Opening the app store… <a href="{{ '/#download' | relative_url }}">Choose a download</a></p>
+  <p lang="ru">Открываем магазин приложений… <a href="{{ '/ru/#download' | relative_url }}">Выбрать загрузку</a></p>
+</body>
+</html>

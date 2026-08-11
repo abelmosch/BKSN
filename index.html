@@ -1,10 +1,15 @@
 ---
 layout: default
+lang: en
+bilingual: true
+ref: home
+schema: home
 title: Bakasana
-seo_title: Bakasana — Yoga Practice & Progress Tracker
-social_title: Bakasana — Make yoga the habit you want to return to
-description: Bakasana is a yoga practice app for guided sessions, streak tracking, a private Practice Timeline, sharing, and leaderboards. Join the iPhone or Android beta.
-social_description: Guided yoga practice, honest progress tracking, and a private visual timeline. Join the Bakasana beta on iPhone or Android.
+seo_title: Bakasana — Mobile Yoga Practice Companion
+social_title: Bakasana — Yoga practice in your rhythm
+description: Bakasana is a mobile yoga practice companion for iPhone and Android, built to help people practice consistently, track progress, and see their transformation over time.
+social_description: Guided sessions, progress tracking, streaks, and your private Practice Timeline. Free for iPhone and Android.
+last_modified_at: 2026-08-10
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -16,71 +21,91 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
 
   <div class="hero-inner container container--wide">
     <div class="hero-topline">
-      <p class="status-pill"><span class="status-dot"></span>Beta testing</p>
-      <p class="label-caps hero-platforms">iOS + Android / Version {{ site.app.version }} / Build {{ site.app.build }}</p>
+      <p class="status-pill"><span class="status-dot"></span>Available now</p>
+      <p class="label-caps hero-platforms">iPhone + Android</p>
     </div>
 
     <div class="hero-copy">
-      <p class="eyebrow label-caps">Practice system / Built for consistency</p>
-      <h1 id="hero-title">Build a yoga practice you want to return to.</h1>
-      <p class="hero-lede">Guided sessions, honest progress, and a private timeline—built to bring you back to the mat.</p>
+      <p class="eyebrow label-caps">Yoga practice companion</p>
+      <h1 id="hero-title">A mobile yoga practice companion built for consistency.</h1>
+      <p class="hero-lede">Bakasana helps you practice yoga regularly with guided sessions, progress tracking, streaks, a private Practice Timeline, sharing, and leaderboards. Available for iPhone and Android.</p>
+      <p class="hero-slogan">{{ site.data.brand.en.slogan }}</p>
     </div>
 
     <div class="hero-actions" aria-label="App availability">
-      <a class="download-card download-card--active" href="{{ site.app.beta.ios.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana iPhone beta on TestFlight; opens in a new tab">
-        <span class="download-platform">iPhone</span>
-        <span class="download-state">Join TestFlight <span aria-hidden="true">↗</span></span>
+      <a class="download-card download-card--active" href="{{ site.app.stores.ios.url }}" target="_blank" rel="noopener noreferrer" aria-label="Download Bakasana on the App Store; opens in a new tab">
+        <span class="download-platform">{{ site.data.ui.en.cta_ios_platform }}</span>
+        <span class="download-state">{{ site.data.ui.en.cta_ios }} <span aria-hidden="true">↗</span></span>
       </a>
-      <a class="download-card download-card--active" href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana Android beta on Google Play; opens in a new tab">
-        <span class="download-platform">Android</span>
-        <span class="download-state">Join beta <span aria-hidden="true">↗</span></span>
+      <a class="download-card download-card--active" href="{{ site.app.stores.android.url }}" target="_blank" rel="noopener noreferrer" aria-label="Get Bakasana on Google Play; opens in a new tab">
+        <span class="download-platform">{{ site.data.ui.en.cta_android_platform }}</span>
+        <span class="download-state">{{ site.data.ui.en.cta_android }} <span aria-hidden="true">↗</span></span>
       </a>
     </div>
 
-    <a class="hero-scroll label-caps" href="#features">Explore the beta <span aria-hidden="true">↓</span></a>
+    <a class="hero-scroll label-caps" href="#what-is">Explore Bakasana <span aria-hidden="true">↓</span></a>
   </div>
 </section>
 
-<section id="features" class="section section-intro" aria-labelledby="features-title">
+<section id="what-is" class="section section-intro" aria-labelledby="what-title">
   <div class="container container--wide">
     <div class="section-heading">
-      <p class="section-index label-caps">01 / The practice system</p>
-      <h2 id="features-title">Progress you can feel—and see.</h2>
-      <p>Bakasana brings the parts of a steady practice into one focused place. Start a session, stay present, and let the app keep track of the work.</p>
+      <p class="section-index label-caps">01 / What is Bakasana</p>
+      <h2 id="what-title">{{ site.data.brand.en.what_title }}</h2>
+      <p>{{ site.data.brand.en.what_lede }}</p>
     </div>
 
-    <div class="feature-grid">
-      <article class="feature-card feature-card--wide">
-        <span class="feature-number">01</span>
-        <h3>Practice with purpose</h3>
-        <p>Choose a focused program, follow the setup guide, and use a clear countdown and timer while you practice.</p>
-        <span class="feature-meta label-caps">Guided sessions</span>
-      </article>
-      <article class="feature-card">
-        <span class="feature-number">02</span>
-        <h3>Build consistency</h3>
-        <p>See today, total time, streaks, and a calendar history of every session.</p>
-        <span class="feature-meta label-caps">Streaks + history</span>
-      </article>
-      <article class="feature-card">
-        <span class="feature-number">03</span>
-        <h3>Practice together</h3>
-        <p>Sign in with Game Center or Play Games to sync progress and join program leaderboards.</p>
-        <span class="feature-meta label-caps">Cross-platform identity</span>
-      </article>
-      <article class="feature-card">
-        <span class="feature-number">04</span>
-        <h3>Share the moment</h3>
-        <p>Create clean share cards for sessions, rankings, and the progress you have earned.</p>
-        <span class="feature-meta label-caps">Share cards</span>
-      </article>
-      <article class="feature-card feature-card--dark">
-        <span class="feature-number">05</span>
-        <h3>Return to the mat</h3>
-        <p>Optional reminders help keep the rhythm going without turning practice into noise.</p>
-        <span class="feature-meta label-caps">Practice reminders</span>
-      </article>
-    </div>
+    <ul class="capability-list">
+      <li>
+        <span class="capability-label label-caps">01</span>
+        <div>
+          <h3>Guided practice sessions and timers</h3>
+          <p>Choose a program, follow the setup, and use a clear countdown while you practice.</p>
+        </div>
+      </li>
+      <li>
+        <span class="capability-label label-caps">02</span>
+        <div>
+          <h3>Practice history and streaks</h3>
+          <p>See today, total time, streaks, and a calendar history of every session.</p>
+        </div>
+      </li>
+      <li>
+        <span class="capability-label label-caps">03</span>
+        <div>
+          <h3>Progress statistics</h3>
+          <p>Track personal records, totals, and how your consistency changes over time.</p>
+        </div>
+      </li>
+      <li>
+        <span class="capability-label label-caps">04</span>
+        <div>
+          <h3>Private on-device Practice Timeline</h3>
+          <p>Optional short clips stay on your device and assemble into a personal timelapse.</p>
+        </div>
+      </li>
+      <li>
+        <span class="capability-label label-caps">05</span>
+        <div>
+          <h3>Sharing</h3>
+          <p>Create clean share cards for sessions, rankings, and milestones.</p>
+        </div>
+      </li>
+      <li>
+        <span class="capability-label label-caps">06</span>
+        <div>
+          <h3>Game Center and Play Games leaderboards</h3>
+          <p>Sign in to sync progress and compare dedication on program leaderboards.</p>
+        </div>
+      </li>
+      <li>
+        <span class="capability-label label-caps">07</span>
+        <div>
+          <h3>Guest Mode</h3>
+          <p>Practice without a separate Bakasana account; your local data stays on your device.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -88,10 +113,10 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
   <div class="container container--wide">
     <div class="section-heading section-heading--row">
       <div>
-        <p class="section-index label-caps">02 / Four ways to practice</p>
-        <h2 id="programs-title">Meet yourself where you are.</h2>
+        <p class="section-index label-caps">02 / Four programs</p>
+        <h2 id="programs-title">Balance, strength, recovery, and free practice.</h2>
       </div>
-      <p>Balance, strength, movement, and rest belong to the same practice.</p>
+      <p>Four complementary ways to show up—without turning practice into a sequence builder.</p>
     </div>
 
     <div class="program-grid">
@@ -120,29 +145,6 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
         <span class="program-level label-caps">Open / Free form</span>
       </article>
     </div>
-
-    <div class="guide-showcase" aria-labelledby="guide-title">
-      <div class="guide-copy">
-        <p class="section-index label-caps">Guide / 00:07</p>
-        <h3 id="guide-title">See the practice flow.</h3>
-        <p>From your history to a focused session in a few clear steps. This short English-interface walkthrough shows how the current beta keeps practice close at hand.</p>
-        <ol class="guide-steps">
-          <li><span>01</span>Review your practice history.</li>
-          <li><span>02</span>Choose from four programs.</li>
-          <li><span>03</span>Read the setup guide.</li>
-          <li><span>04</span>Position your phone and begin.</li>
-        </ol>
-        <p id="guide-video-note" class="guide-note label-caps">Silent preview / English interface</p>
-      </div>
-
-      <figure class="guide-video-frame">
-        <video controls muted playsinline preload="metadata" aria-describedby="guide-video-note">
-          <source src="{{ '/assets/video/intro_en.mp4' | relative_url }}" type="video/mp4">
-          Your browser does not support embedded video.
-        </video>
-        <figcaption><span>Beta walkthrough</span><span>{{ site.app.version }} / Build {{ site.app.build }}</span></figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 
@@ -161,7 +163,7 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
     <div class="timeline-copy">
       <p class="section-index label-caps">03 / Practice Timeline</p>
       <h2 id="timeline-title">Watch your practice become a story.</h2>
-      <p>When you choose to enable the camera, Bakasana saves short, silent practice clips and assembles them into a personal timelapse.</p>
+      <p>When you choose to enable the camera, Bakasana saves short, silent practice clips and assembles them into a personal timelapse—your Practice Timeline, private by default.</p>
       <ul class="check-list">
         <li><span aria-hidden="true">01</span>Camera access is optional.</li>
         <li><span aria-hidden="true">02</span>Practice clips stay on your device.</li>
@@ -172,54 +174,60 @@ social_description: Guided yoga practice, honest progress tracking, and a privat
   </div>
 </section>
 
-<section id="beta" class="section section-beta" aria-labelledby="beta-title">
-  <div class="container container--wide beta-grid">
-    <div>
-      <p class="status-pill status-pill--light"><span class="status-dot"></span>Now in beta</p>
-      <h2 id="beta-title">The next practice starts soon.</h2>
+<section id="expert" class="section section-expert" aria-labelledby="expert-title">
+  <div class="container container--wide expert-teaser">
+    <p class="section-index label-caps">04 / Practice philosophy</p>
+    <h2 id="expert-title">Shaped with a yoga trainer’s eye.</h2>
+    <p>{{ site.data.brand.en.expert_teaser }}</p>
+    <a class="text-link label-caps" href="{{ '/about/' | relative_url }}#{{ site.data.brand.expert.about_anchor }}">About Alena Tkacheva and Bakasana <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<section id="faq" class="section section-support" aria-labelledby="faq-title">
+  <div class="container container--wide support-grid">
+    <div class="support-intro">
+      <p class="section-index label-caps">05 / FAQ</p>
+      <h2 id="faq-title">Clear answers about what Bakasana is.</h2>
+      <p>Need help with the app, accounts, or Practice Timeline? Visit <a href="{{ '/support/' | relative_url }}">Support</a> or email bakasana.app@gmail.com.</p>
     </div>
-    <div class="beta-copy">
-      <p>We are testing the current iOS and Android builds, improving the practice flow, and preparing the public release.</p>
-      <div class="beta-platforms" aria-label="Download availability">
-        <a href="{{ site.app.beta.ios.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana iOS beta on TestFlight; opens in a new tab"><span>iOS</span><strong>Join TestFlight <span aria-hidden="true">↗</span></strong></a>
-        <a href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer" aria-label="Join the Bakasana Android beta on Google Play; opens in a new tab"><span>Android</span><strong>Join Google Play <span aria-hidden="true">↗</span></strong></a>
-      </div>
-      <p class="beta-note beta-note--links label-caps">Android testers can <a href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer">join on Android</a> or <a href="{{ site.app.beta.android.web_join_url }}" target="_blank" rel="noopener noreferrer">join on the web</a>.</p>
+
+    <div class="faq-list">
+      <details open>
+        <summary>Is Bakasana a mobile app or a website?<span aria-hidden="true">+</span></summary>
+        <p>Bakasana is a mobile app for iPhone and Android. This website explains the product, practice approach, and support; the practice itself happens in the app.</p>
+      </details>
+      <details>
+        <summary>Does Bakasana create yoga sequences?<span aria-hidden="true">+</span></summary>
+        <p>No. Bakasana is not a sequence builder or generator. You choose one of four programs and practice with a timer, guided voice, or free-form recording.</p>
+      </details>
+      <details>
+        <summary>Does Bakasana replace a yoga teacher?<span aria-hidden="true">+</span></summary>
+        <p>No. Bakasana is a companion for regular practice and progress tracking. It does not replace a teacher, personalized instruction, or medical advice.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<section id="support" class="section section-support" aria-labelledby="support-title">
-  <div class="container container--wide support-grid">
-    <div class="support-intro">
-      <p class="section-index label-caps">04 / Support</p>
-      <h2 id="support-title">Questions are part of the process.</h2>
-      <p>Need help with the beta, your account, or Practice Timeline? Start here or write to us directly.</p>
-      <a class="btn btn-primary" href="mailto:bakasana.app@gmail.com">Email support</a>
-      <p class="support-email">bakasana.app@gmail.com</p>
+<section id="download" class="section section-beta" aria-labelledby="download-title">
+  <div class="container container--wide beta-grid">
+    <div>
+      <p class="status-pill status-pill--light"><span class="status-dot"></span>Available now</p>
+      <h2 id="download-title">Start your next practice.</h2>
+      <figure class="download-qr">
+        <img src="{{ '/assets/qr-codes/download.svg' | relative_url }}" width="200" height="200" loading="lazy" alt="QR code to download Bakasana for iPhone or Android">
+        <figcaption>
+          <strong>Scan to download the app</strong>
+          <span>Opens the right store for your phone</span>
+        </figcaption>
+      </figure>
     </div>
-
-    <div class="faq-list">
-      <details>
-        <summary>When can I download Bakasana?<span aria-hidden="true">+</span></summary>
-        <p>The iOS beta is available through <a href="{{ site.app.beta.ios.join_url }}" target="_blank" rel="noopener noreferrer">Apple TestFlight</a>. Android testers can <a href="{{ site.app.beta.android.join_url }}" target="_blank" rel="noopener noreferrer">join through Google Play on Android</a> or <a href="{{ site.app.beta.android.web_join_url }}" target="_blank" rel="noopener noreferrer">join on the web</a>.</p>
-      </details>
-      <details>
-        <summary>Which devices are supported?<span aria-hidden="true">+</span></summary>
-        <p>The current iPhone beta is distributed through TestFlight, and the Android beta through Google Play. Final compatibility details will accompany the public release.</p>
-      </details>
-      <details>
-        <summary>Do I need to create an account?<span aria-hidden="true">+</span></summary>
-        <p>No separate Bakasana account is required. You can use Guest Mode, or sign in with Game Center or Play Games for cloud progress and leaderboards.</p>
-      </details>
-      <details>
-        <summary>Does Practice Timeline upload my camera clips?<span aria-hidden="true">+</span></summary>
-        <p>No. Camera access is optional, recordings are silent, and Practice Timeline media is processed and stored on your device.</p>
-      </details>
-      <details>
-        <summary>How do I delete my data?<span aria-hidden="true">+</span></summary>
-        <p>Local data can be removed by uninstalling the app. Signed-in progress and platform data require additional steps described on our <a href="{{ '/delete-account/' | relative_url }}">account deletion page</a>.</p>
-      </details>
+    <div class="beta-copy">
+      <p>Download Bakasana for iPhone or Android and start a focused practice whenever you are ready.</p>
+      <div class="beta-platforms" aria-label="Download availability">
+        <a href="{{ site.app.stores.ios.url }}" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store; opens in a new tab"><span class="store-platform"><svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="2.5" width="13" height="19" rx="3"></rect><path d="M9.5 5h5M10 18.5h4"></path></svg>iOS</span><strong>Download on the App Store <span aria-hidden="true">↗</span></strong></a>
+        <a href="{{ site.app.stores.android.url }}" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play; opens in a new tab"><span class="store-platform"><svg class="store-icon store-icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5 19 12 5 20.5Z"></path><path d="m5 3.5 9.5 11.25M5 20.5l9.5-11.25"></path></svg>Google Play</span><strong>Get it on Google Play <span aria-hidden="true">↗</span></strong></a>
+      </div>
+      <p class="beta-note label-caps">Free download / iPhone + Android</p>
     </div>
   </div>
 </section>

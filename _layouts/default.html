@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+{% assign page_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[page_lang] %}
+{% assign brand = site.data.brand[page_lang] %}
+{% assign enabled_social_links = site.social_links | where: 'enabled', true %}
+{% assign meta_description = page.description | default: site.description %}
+{% if page_lang == 'ru' and page.description == nil %}
+  {% assign meta_description = site.description_ru %}
+{% endif %}
+{% assign social_title = page.social_title | default: page.seo_title | default: page.title | default: site.title %}
+{% assign social_description = page.social_description | default: meta_description %}
+{% assign canonical_url = site.production_url | append: page.url %}
+{% assign social_image_url = site.production_url | append: '/assets/og/bakasana-preview.jpg' %}
+{% if page_lang == 'ru' %}
+  {% assign home_path = '/ru/' %}
+  {% assign about_path = '/ru/about/' %}
+  {% assign support_path = '/support/' %}
+  {% assign og_locale = 'ru_RU' %}
+  {% if page.url == '/ru/' or page.url == '/ru' %}
+    {% assign en_alt = '/' %}
+  {% else %}
+    {% assign en_alt = page.url | replace_first: '/ru', '' %}
+  {% endif %}
+  {% assign ru_alt = page.url %}
+  {% assign lang_switch_href = en_alt %}
+{% else %}
+  {% assign home_path = '/' %}
+  {% assign about_path = '/about/' %}
+  {% assign support_path = '/support/' %}
+  {% assign og_locale = 'en_US' %}
+  {% assign en_alt = page.url %}
+  {% if page.url == '/' %}
+    {% assign ru_alt = '/ru/' %}
+  {% else %}
+    {% assign ru_alt = '/ru' | append: page.url %}
+  {% endif %}
+  {% assign lang_switch_href = ru_alt %}
+{% endif %}
+{% assign bilingual = page.bilingual | default: false %}
+<html lang="{{ page_lang }}">
 <head>
-  {% assign meta_description = page.description | default: site.description %}
-  {% assign social_title = page.social_title | default: page.seo_title | default: page.title | default: site.title %}
-  {% assign social_description = page.social_description | default: meta_description %}
-  {% assign canonical_url = site.production_url | append: page.url %}
-  {% assign social_image_url = site.production_url | append: '/assets/og/bakasana-preview.jpg' %}
-  {% assign enabled_social_links = site.social_links | where: 'enabled', true %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -15,11 +47,19 @@
   <meta name="author" content="Bakasana">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="canonical" href="{{ canonical_url }}">
+  {% if bilingual %}
+  <link rel="alternate" hreflang="en" href="{{ site.production_url }}{{ en_alt }}">
+  <link rel="alternate" hreflang="ru" href="{{ site.production_url }}{{ ru_alt }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.production_url }}{{ en_alt }}">
+  {% endif %}
   <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="{{ og_locale }}">
+  {% if bilingual %}
+  <meta property="og:locale:alternate" content="{% if page_lang == 'ru' %}en_US{% else %}ru_RU{% endif %}">
+  {% endif %}
   <meta property="og:site_name" content="Bakasana">
   <meta property="og:title" content="{{ social_title }}">
   <meta property="og:description" content="{{ social_description }}">
@@ -29,69 +69,54 @@
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Bakasana yoga practice app and community">
+  <meta property="og:image:alt" content="Bakasana yoga practice companion">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ social_title }}">
   <meta name="twitter:description" content="{{ social_description }}">
   <meta name="twitter:image" content="{{ social_image_url }}">
-  <meta name="twitter:image:alt" content="Bakasana yoga practice app and community">
+  <meta name="twitter:image:alt" content="Bakasana yoga practice companion">
 
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.app.version }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
 
-  {% if page.url == '/' %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "@id": "https://bakasana.app/#app",
-    "name": "Bakasana",
-    "url": "https://bakasana.app/",
-    "description": "A yoga practice and progress-tracking app with guided sessions, streaks, a private on-device Practice Timeline, sharing, and leaderboards.",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "iOS, Android",
-    "softwareVersion": "{{ site.app.version }}",
-    "image": "https://bakasana.app/assets/og/bakasana-preview.jpg",
-    "downloadUrl": [
-      "{{ site.app.beta.ios.join_url }}",
-      "{{ site.app.beta.android.join_url }}"
-    ],
-    "sameAs": [
-      {% for social in enabled_social_links %}"{{ social.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}
-    ],
-    "author": {
-      "@type": "Organization",
-      "name": "Bakasana",
-      "url": "https://bakasana.app/",
-      "logo": "https://bakasana.app/assets/images/logo.png"
-    }
-  }
-  </script>
+  {% if page.schema == 'home' %}
+  {% include schema-home.html %}
+  {% elsif page.schema == 'about' %}
+  {% include schema-about.html %}
   {% endif %}
 </head>
-<body{% if page.url == '/' %} class="home-page"{% endif %}>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<body{% if page.url == '/' or page.url == '/ru/' %} class="home-page"{% endif %}>
+  <a class="skip-link" href="#main-content">{{ ui.skip }}</a>
 
   <header class="site-header">
     <div class="container container--wide header-inner">
-      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Bakasana home">
-        <img class="brand-mark" src="{{ '/assets/images/logo.png' | relative_url }}" width="512" height="512" alt="">
-        <span class="brand-name">Bakasana</span>
-        <span class="brand-status">Beta</span>
-      </a>
+      <div class="header-primary">
+        <a class="brand" href="{{ home_path | relative_url }}" aria-label="Bakasana home">
+          <img class="brand-mark" src="{{ '/assets/images/logo.png' | relative_url }}" width="512" height="512" alt="">
+          <span class="brand-name">Bakasana</span>
+        </a>
+        {% if bilingual %}
+        <a class="mobile-lang-switch" href="{{ lang_switch_href | relative_url }}" hreflang="{% if page_lang == 'ru' %}en{% else %}ru{% endif %}" lang="{% if page_lang == 'ru' %}en{% else %}ru{% endif %}" aria-label="{{ ui.lang_switch_aria }}">
+          <span{% if page_lang == 'en' %} class="is-active"{% endif %}>EN</span>
+          <span aria-hidden="true">/</span>
+          <span{% if page_lang == 'ru' %} class="is-active"{% endif %}>RU</span>
+        </a>
+        {% endif %}
+      </div>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="{{ '/#features' | relative_url }}">Features</a>
-        <a href="{{ '/#programs' | relative_url }}">Programs</a>
-        <a href="{{ '/#beta' | relative_url }}">Beta</a>
-        <a href="{{ '/support/' | relative_url }}"{% if page.url contains '/support' %} aria-current="page"{% endif %}>Support</a>
+        <a href="{{ about_path | relative_url }}"{% if page.url contains '/about' %} aria-current="page"{% endif %}>{{ ui.nav.about }}</a>
+        <a href="{{ support_path | relative_url }}"{% if page.url contains '/support' %} aria-current="page"{% endif %}>{{ ui.nav.support }}</a>
+        {% if bilingual %}
+        <a class="lang-switch lang-switch--desktop" href="{{ lang_switch_href | relative_url }}" hreflang="{% if page_lang == 'ru' %}en{% else %}ru{% endif %}" lang="{% if page_lang == 'ru' %}en{% else %}ru{% endif %}" aria-label="{{ ui.lang_switch_aria }}">{{ ui.lang_switch }}</a>
+        {% endif %}
       </nav>
     </div>
   </header>
 
-  <main id="main-content"{% unless page.url == '/' %} class="container legal-main"{% endunless %}>
+  <main id="main-content"{% if page.main_class %} class="{{ page.main_class }}"{% elsif page.url != '/' and page.url != '/ru/' %} class="container content-main"{% endif %}>
     {{ content }}
   </main>
 
@@ -101,26 +126,27 @@
         <img class="brand-mark" src="{{ '/assets/images/logo.png' | relative_url }}" width="512" height="512" alt="">
         <div>
           <p class="footer-name">Bakasana</p>
-          <p>Find your balance. Return to practice.</p>
+          <p>{{ brand.closing }}</p>
         </div>
       </div>
-      <nav class="footer-links" aria-label="Legal and support">
+      <nav class="footer-links" aria-label="{{ ui.footer_explore }}">
+        <a href="{{ about_path | relative_url }}">{{ ui.nav.about }}</a>
+        <a href="{{ support_path | relative_url }}">{{ ui.nav.support }}</a>
         <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
         <a href="{{ '/terms/' | relative_url }}">Terms</a>
         <a href="{{ '/delete-account/' | relative_url }}">Delete account</a>
-        <a href="{{ '/support/' | relative_url }}">Support</a>
       </nav>
       {% if enabled_social_links.size > 0 %}
-      <nav class="footer-social" aria-label="Social media">
-        <p class="footer-nav-title">Follow Bakasana</p>
+      <nav class="footer-social" aria-label="{{ ui.footer_social }}">
+        <p class="footer-nav-title">{{ ui.footer_social }}</p>
         {% for social in enabled_social_links %}
           <a href="{{ social.url }}" target="_blank" rel="me noopener noreferrer" aria-label="Follow Bakasana on {{ social.name }}; opens in a new tab">{{ social.name }} <span aria-hidden="true">↗</span></a>
         {% endfor %}
       </nav>
       {% endif %}
       <div class="footer-meta">
-        <span>iOS + Android Beta / Version {{ site.app.version }} / Build {{ site.app.build }}</span>
-        <span>&copy; {{ site.time | date: '%Y' }} Bakasana Lab</span>
+        <span>{{ ui.footer_version }} {{ site.app.version }}</span>
+        <span>&copy; {{ site.time | date: '%Y' }} Bakasana Community</span>
       </div>
     </div>
   </footer>
