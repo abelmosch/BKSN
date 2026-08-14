@@ -2,7 +2,7 @@
 {% assign brand = site.data.brand[page_lang] %}
 {% assign expert = site.data.brand.expert %}
 {% assign enabled_social_links = site.social_links | where: 'enabled', true %}
-{% capture org_same_as %}{% for social in enabled_social_links %}"{{ social.url }}", {% endfor %}"{{ site.app.stores.ios.url }}", "{{ site.app.stores.android.url }}"{% endcapture %}
+{% capture org_same_as %}{% for social in enabled_social_links %}"{{ social.url }}"{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
 {% capture person_same_as %}{% assign first_same = true %}{% if expert.instagram and expert.instagram != '' %}"{{ expert.instagram }}"{% assign first_same = false %}{% endif %}{% if expert.youtube and expert.youtube != '' %}{% unless first_same %}, {% endunless %}"{{ expert.youtube }}"{% endif %}{% endcapture %}
 <script type="application/ld+json">
 {
@@ -24,7 +24,19 @@
       "description": {{ brand.short_pitch | jsonify }},
       "applicationCategory": "{{ site.app.category }}",
       "operatingSystem": "{{ site.app.operating_systems }}",
-      "softwareVersion": "{{ site.app.version }}"
+      "softwareVersion": "{{ site.app.version }}",
+      "sameAs": [
+        "{{ site.app.stores.ios.url }}",
+        "{{ site.app.stores.android.url }}"
+      ],
+      "downloadUrl": [
+        "{{ site.app.stores.ios.url }}",
+        "{{ site.app.stores.android.url }}"
+      ],
+      "installUrl": [
+        "{{ site.app.stores.ios.url }}",
+        "{{ site.app.stores.android.url }}"
+      ]
     },
     {
       "@type": "Person",
