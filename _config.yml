@@ -6,8 +6,8 @@ baseurl: ""
 production_url: https://bakasana.app
 
 app:
-  version: 2.2.6
-  build: 44
+  version: 2.2.7
+  build: 47
   category: HealthApplication
   operating_systems: "iOS, Android"
   stores:

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign page_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[page_lang] %}
+{% if page_lang == 'ru' %}
+  {% assign guides_path = '/ru/guides/' %}
+  {% assign home_path = '/ru/' %}
+{% else %}
+  {% assign guides_path = '/guides/' %}
+  {% assign home_path = '/' %}
+{% endif %}
+
+<article class="guide-article legal-doc">
+  <nav class="breadcrumbs label-caps" aria-label="Breadcrumb">
+    <a href="{{ home_path | relative_url }}">{{ ui.breadcrumb_home }}</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ guides_path | relative_url }}">{{ ui.breadcrumb_guides }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ page.title }}</span>
+  </nav>
+
+  <header class="guide-header">
+    <h1>{{ page.title }}</h1>
+    <p class="guide-meta meta">
+      <span>{{ ui.author_label }}: Bakasana Community</span>
+      <span>{{ ui.published_label }}: {{ page.date_published }}</span>
+      <span>{{ ui.updated_label }}: {{ page.date_modified | default: page.date_published }}</span>
+    </p>
+  </header>
+
+  <div class="guide-body">
+    {{ content }}
+  </div>
+
+  <aside class="guide-download-cta" aria-label="{{ ui.guide_download_prompt }}">
+    <p>{{ ui.guide_download_prompt }}</p>
+    <a class="btn btn-primary" href="{{ '/download/' | relative_url }}">{{ ui.guide_download_cta }}</a>
+  </aside>
+
+  <aside class="guide-disclaimer" role="note">
+    <p>{{ ui.disclaimer }}</p>
+  </aside>
+</article>

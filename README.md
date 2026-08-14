@@ -54,7 +54,7 @@ Read the full [Privacy Policy](https://bakasana.app/privacy/) and [account delet
 | iPhone | Public release | [Download on the App Store](https://apps.apple.com/app/bakasana/id6776696295) |
 | Android | Public release | [Get it on Google Play](https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app) |
 
-The current website reflects public app version **2.2.6, build 44**.
+The current website reflects public app version **2.2.7, build 47**.
 
 ## Beta testing access
 

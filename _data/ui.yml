@@ -2,6 +2,7 @@ en:
   skip: Skip to content
   nav:
     about: About
+    guides: Guides
     support: Support
   lang_switch: RU
   lang_switch_aria: Switch to Russian
@@ -12,11 +13,22 @@ en:
   cta_ios: Download on the App Store
   cta_android_platform: Android
   cta_android: Get it on Google Play
+  author_label: Author
+  published_label: Published
+  updated_label: Updated
+  disclaimer: "Bakasana is a practice companion. It does not replace a yoga teacher, personalized instruction, or medical advice."
+  guides_index_title: Guides
+  guides_index_lede: Practical reading on yoga practice, body awareness, progress, and the habits that help you return to the mat.
+  breadcrumb_home: Home
+  breadcrumb_guides: Guides
+  guide_download_prompt: Haven’t downloaded Bakasana yet?
+  guide_download_cta: Download the app
 
 ru:
   skip: Перейти к содержанию
   nav:
     about: О приложении
+    guides: Гайды
     support: Поддержка
   lang_switch: EN
   lang_switch_aria: Переключить на английский
@@ -27,3 +39,13 @@ ru:
   cta_ios: Скачать в App Store
   cta_android_platform: Android
   cta_android: Скачать в Google Play
+  author_label: Автор
+  published_label: Опубликовано
+  updated_label: Обновлено
+  disclaimer: "Bakasana — напарник для регулярной практики. Приложение не заменяет преподавателя йоги, индивидуальные занятия или медицинскую консультацию."
+  guides_index_title: Гайды
+  guides_index_lede: Практические материалы о йоге, осознанности тела, прогрессе и привычках, которые помогают возвращаться к практике.
+  breadcrumb_home: Главная
+  breadcrumb_guides: Гайды
+  guide_download_prompt: Ещё не скачали Bakasana?
+  guide_download_cta: Скачать приложение
