@@ -26,7 +26,7 @@ The app supports four complementary ways to practice:
 
 | Program | Focus | Experience |
 | --- | --- | --- |
-| **Bakasana** | Balance and concentration | Build the stability and confidence needed for crane pose. |
+| **Bakasana** | Balance and concentration | Build the stability and confidence needed for a regular practice. |
 | **Plank** | Strength and endurance | Develop the full-body foundation behind a stronger practice. |
 | **Shavasana** | Recovery and meditation | Follow guided voice sessions and make space for deliberate rest. |
 | **Flow** | Free-form movement | Practice through your own sequence while Bakasana quietly records your timeline. |

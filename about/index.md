@@ -5,10 +5,10 @@ bilingual: true
 ref: about
 schema: about
 title: About Bakasana
-seo_title: About Bakasana — Yoga Practice Companion
-description: Learn what Bakasana is, why it exists, how the four programs work, and how Alena Tkacheva shapes the app’s approach to regular yoga practice.
+seo_title: About Bakasana — an app for the skill of regularity
+description: "Bakasana is not a fitness app. It is a companion for the hardest skill: regularity. So you do not abandon what you started, and you move toward yourself — step by step."
 social_title: About Bakasana
-social_description: A mobile yoga practice companion for consistency, progress tracking, and a private Practice Timeline—shaped with yoga trainer Alena Tkacheva.
+social_description: Not fitness. A personal companion that helps you keep going, build a habit, and return to yourself — step by step.
 main_class: container content-main
 last_modified_at: 2026-08-10
 ---

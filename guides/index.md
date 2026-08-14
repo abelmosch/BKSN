@@ -5,8 +5,8 @@ bilingual: true
 ref: guides-index
 schema: collection
 title: Guides
-seo_title: Bakasana Guides — Yoga Practice and Healthy Habits
-description: Practical Bakasana guides about yoga practice, body awareness, progress, and building healthy habits through regular practice.
+seo_title: Bakasana Guides — returning to practice
+description: "On yoga, the body, attention, and the hardest skill: regularity. So you do not abandon what you started, and you return to yourself."
 main_class: container content-main
 last_modified_at: 2026-08-12
 ---
@@ -24,7 +24,7 @@ last_modified_at: 2026-08-12
     <a href="{{ '/guides/bakasana-is-foundational-and-here-is-why/' | relative_url }}">
       <span class="label-caps">Guide 01</span>
       <strong>Bakasana Is Foundational—and Here’s Why</strong>
-      <p>What Bakasana develops, why the pose can feel difficult, and how regular practice builds strength, balance, and body awareness.</p>
+      <p>Why Bakasana is foundational, and how practice teaches you not to abandon what you started — even when it still feels out of reach.</p>
     </a>
   </li>
 </ul>
