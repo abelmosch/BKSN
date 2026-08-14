@@ -3,6 +3,7 @@ layout: default
 lang: ru
 bilingual: true
 ref: guides-index
+schema: collection
 title: Гайды
 seo_title: Гайды Bakasana — Йога-практика и здоровые привычки
 description: Практические гайды Bakasana о йоге, осознанности тела, прогрессе и формировании здоровых привычек благодаря регулярной практике.

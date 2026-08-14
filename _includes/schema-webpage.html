@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "{{ canonical_url }}#webpage",
+      "url": "{{ canonical_url }}",
+      "name": {% if page.seo_title %}{{ page.seo_title | jsonify }}{% elsif page.title %}{{ page.title | jsonify }}{% else %}{{ site.title | jsonify }}{% endif %},
+      "description": {{ meta_description | jsonify }},
+      "inLanguage": "{{ page_lang }}",
+      "isPartOf": { "@id": "https://bakasana.app/#website" },
+      "about": { "@id": "https://bakasana.app/#app" },
+      "primaryImageOfPage": "{{ social_image_url }}"
+    }
+  ]
+}
+</script>

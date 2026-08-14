@@ -1,0 +1,62 @@
+{% assign page_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[page_lang] %}
+{% if page_lang == 'ru' %}
+  {% assign home_crumb = site.production_url | append: '/ru/' %}
+{% else %}
+  {% assign home_crumb = site.production_url | append: '/' %}
+{% endif %}
+{% assign guide_pages = site.pages | where: "layout", "guide" | where: "lang", page_lang %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ ui.breadcrumb_home | jsonify }},
+          "item": "{{ home_crumb }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ ui.breadcrumb_guides | jsonify }},
+          "item": "{{ canonical_url }}"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "{{ canonical_url }}#webpage",
+      "url": "{{ canonical_url }}",
+      "name": {% if page.seo_title %}{{ page.seo_title | jsonify }}{% else %}{{ page.title | jsonify }}{% endif %},
+      "description": {{ meta_description | jsonify }},
+      "inLanguage": "{{ page_lang }}",
+      "isPartOf": { "@id": "https://bakasana.app/#website" },
+      "about": { "@id": "https://bakasana.app/#app" },
+      "breadcrumb": { "@id": "{{ canonical_url }}#breadcrumb" },
+      "mainEntity": { "@id": "{{ canonical_url }}#itemlist" },
+      "primaryImageOfPage": "{{ social_image_url }}"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "{{ canonical_url }}#itemlist",
+      "name": {{ page.title | jsonify }},
+      "numberOfItems": {{ guide_pages.size }},
+      "itemListElement": [
+        {% for g in guide_pages %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "name": {{ g.title | jsonify }},
+          "url": "{{ site.production_url }}{{ g.url }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>

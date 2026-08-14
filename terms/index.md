@@ -1,8 +1,10 @@
 ---
 layout: default
+lang: en
 title: Terms of Service
 description: Terms and conditions for using the Bakasana mobile application.
 permalink: /terms/
+last_modified_at: 2026-07-15
 ---
 
 <div class="legal-doc" markdown="1">

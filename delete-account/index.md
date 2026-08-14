@@ -1,8 +1,10 @@
 ---
 layout: default
+lang: en
 title: Delete Account & Data
 description: How to delete your Bakasana account and associated data on iOS and Android.
 permalink: /delete-account/
+last_modified_at: 2026-07-15
 ---
 
 <div class="legal-doc" markdown="1">

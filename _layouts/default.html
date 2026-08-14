@@ -90,6 +90,12 @@
   {% include schema-about.html %}
   {% elsif page.schema == 'article' %}
   {% include schema-article.html %}
+  {% elsif page.schema == 'collection' %}
+  {% include schema-collection.html %}
+  {% elsif page.schema == nil %}
+  {% unless page.robots contains 'noindex' %}
+  {% include schema-webpage.html %}
+  {% endunless %}
   {% endif %}
 </head>
 <body{% if page.url == '/' or page.url == '/ru/' %} class="home-page"{% endif %}>

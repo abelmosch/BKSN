@@ -43,6 +43,18 @@
       "datePublished": "{{ page.date_published }}",
       "dateModified": "{{ page.date_modified | default: page.date_published }}",
       "inLanguage": "{{ page_lang }}",
+      "isAccessibleForFree": true,
+      "articleSection": {{ ui.breadcrumb_guides | jsonify }},
+      "about": [
+        {
+          "@type": "Thing",
+          "name": {% if page_lang == 'ru' %}"Бакасана (поза журавля)"{% else %}"Bakasana (crane pose)"{% endif %}
+        },
+        {
+          "@type": "Thing",
+          "name": {% if page_lang == 'ru' %}"йога-практика"{% else %}"yoga practice"{% endif %}
+        }
+      ],
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "{{ canonical_url }}"

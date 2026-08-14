@@ -1,8 +1,10 @@
 ---
 layout: default
+lang: en
 title: Privacy Policy
 description: How Bakasana collects, uses, stores, and protects your information.
 permalink: /privacy/
+last_modified_at: 2026-07-15
 ---
 
 <div class="legal-doc" markdown="1">

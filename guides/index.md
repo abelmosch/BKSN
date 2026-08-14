@@ -3,6 +3,7 @@ layout: default
 lang: en
 bilingual: true
 ref: guides-index
+schema: collection
 title: Guides
 seo_title: Bakasana Guides — Yoga Practice and Healthy Habits
 description: Practical Bakasana guides about yoga practice, body awareness, progress, and building healthy habits through regular practice.

@@ -1,0 +1,34 @@
+# Bakasana
+
+> Bakasana is a mobile yoga practice companion for iPhone and Android, built to help people practice consistently, track progress, and see their transformation over time.
+
+Bakasana is not a web trainer, not a sequence builder, and not an app for a single pose. Practice happens in the app. This website explains the product, the practice approach, and support.
+
+Brand line: Build a yoga practice you want to return to.
+Closing line: Find your balance. Return to practice.
+
+The app includes four programs — Bakasana (balance), Plank (strength), Shavasana (recovery), and Flow (free-form movement) — plus guided sessions, streaks, progress tracking, and a private on-device Practice Timeline.
+
+## English
+
+- [Home](https://bakasana.app/): Product overview, four programs, Practice Timeline, FAQ, and download links
+- [About](https://bakasana.app/about/): Why Bakasana exists and how yoga trainer Alena Tkacheva shapes the practice approach
+- [Guides](https://bakasana.app/guides/): Practical reading on yoga practice, body awareness, progress, and healthy habits
+- [Bakasana Is Foundational—and Here’s Why](https://bakasana.app/guides/bakasana-is-foundational-and-here-is-why/): What crane pose develops, why it can feel difficult, and how regular practice builds strength, balance, and body awareness
+- [Support](https://bakasana.app/support/): Help with the app, accounts, programs, reminders, and Practice Timeline
+- [Privacy Policy](https://bakasana.app/privacy/): How Bakasana collects, uses, stores, and protects information
+
+## Русский
+
+- [Главная](https://bakasana.app/ru/): Обзор приложения, четыре программы, Practice Timeline, FAQ и ссылки на скачивание
+- [О приложении](https://bakasana.app/ru/about/): Зачем существует Bakasana и как тренер Алёна Ткачева формирует подход к практике
+- [Гайды](https://bakasana.app/ru/guides/): Практические материалы о йоге, осознанности тела, прогрессе и привычках
+- [Бакасана — это база. И вот почему](https://bakasana.app/ru/guides/bakasana-is-foundational-and-here-is-why/): Что развивает поза журавля, почему она может не получаться и как регулярная практика укрепляет силу, баланс и осознанность тела
+
+## Optional
+
+- [Terms of Service](https://bakasana.app/terms/): Terms for using the Bakasana mobile app
+- [Delete account and data](https://bakasana.app/delete-account/): How to delete Bakasana data on iPhone and Android
+- [App Store](https://apps.apple.com/app/bakasana/id6776696295): Download Bakasana for iPhone
+- [Google Play](https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app): Download Bakasana for Android
+- [Instagram](https://www.instagram.com/bakasana.app/): @bakasana.app
