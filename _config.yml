@@ -1,13 +1,13 @@
 title: Bakasana
-description: "Bakasana is not a fitness app. It is a mobile companion for the hardest skill: regularity — so you keep returning to practice, step by step."
-description_ru: "Bakasana — не фитнес-приложение. Это мобильный помощник для самого сложного навыка: регулярности. Чтобы не бросать начатое и возвращаться к себе — шаг за шагом."
+description: "The social app for a yoga practice you want to return to."
+description_ru: "Социальное приложение для практики йоги, к которой хочется возвращаться."
 url: https://bakasana.app
 baseurl: ""
 production_url: https://bakasana.app
 
 app:
-  version: 2.2.7
-  build: 47
+  version: 2.3.12
+  build: 59
   category: HealthApplication
   operating_systems: "iOS, Android"
   stores:
@@ -22,10 +22,16 @@ social_links:
     link_text: "@bakasana.app"
     url: https://www.instagram.com/bakasana.app/
     enabled: true
+  - id: linkedin
+    name: LinkedIn
+    link_text: Bakasana
+    url: https://www.linkedin.com/company/bakasana-app/
+    enabled: true
   - id: youtube
     name: YouTube
-    url:
-    enabled: false
+    link_text: "@DaYogaAlena"
+    url: https://www.youtube.com/@DaYogaAlena
+    enabled: true
   - id: threads
     name: Threads
     url:

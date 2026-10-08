@@ -279,7 +279,7 @@ main {
 .hero-inner {
   min-height: calc(100svh - var(--header-height));
   display: grid;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: 1fr auto auto;
   align-items: start;
   padding-block: clamp(1.5rem, 4vw, 3rem) 1.5rem;
 }
@@ -581,7 +581,7 @@ main {
   padding: clamp(1.3rem, 2.5vw, 2rem);
   border-right: 1px solid var(--line-dark);
   border-bottom: 1px solid var(--line-dark);
-  grid-column: span 3;
+  grid-column: span 4;
 }
 
 .program-card--inverse {
@@ -789,7 +789,7 @@ main {
 }
 
 .section-beta h2 {
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .download-qr {
@@ -1647,6 +1647,134 @@ main {
 .expert-teaser .text-link {
   display: inline-flex;
   margin-top: 1.75rem;
+}
+
+.expert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.75rem;
+  margin-top: 1.75rem;
+}
+
+.expert-teaser .expert-actions .text-link {
+  margin-top: 0;
+}
+
+.lessons-doc .lesson-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lessons-doc .lesson-grid li + li {
+  margin-top: 0;
+}
+
+@media (min-width: 720px) {
+  .lessons-doc .lesson-grid:has(li:nth-child(2)) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.legal-doc a.lesson-card,
+.legal-doc a.lesson-card:hover {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--ink);
+  background: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--ink);
+}
+
+.lesson-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.lesson-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lesson-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+  transition: background 160ms ease;
+}
+
+.lesson-card:hover .lesson-thumb::after {
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.lesson-play {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--white);
+  transform: translate(-50%, -50%);
+  transition: transform 160ms ease;
+}
+
+.lesson-card:hover .lesson-play {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.lesson-play svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-left: 0.12rem;
+  fill: currentColor;
+}
+
+.lesson-length {
+  position: absolute;
+  z-index: 1;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  padding: 0.28rem 0.45rem;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.72);
+  font-size: 0.62rem;
+}
+
+.lesson-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.95rem 1rem 1.1rem;
+}
+
+.lesson-copy .label-caps {
+  color: var(--smoke);
+}
+
+.lesson-copy strong {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.lessons-channel {
+  margin-top: 2.5rem;
 }
 
 .expert-profile {

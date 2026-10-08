@@ -4,7 +4,7 @@ lang: en
 title: Privacy Policy
 description: How Bakasana collects, uses, stores, and protects your information.
 permalink: /privacy/
-last_modified_at: 2026-07-15
+last_modified_at: 2026-10-08
 ---
 
 <div class="legal-doc" markdown="1">
@@ -45,7 +45,7 @@ By downloading or using the App, you agree to this Privacy Policy. If you do not
 
 ### 1.3 Optional Camera (Practice Timeline)
 
-If you enable **Practice Timeline**, the App uses the device camera during eligible practice sessions to create short, silent video clips. Bakasana and Plank save a clip after qualifying holds of at least four seconds; Flow may save short clips at intervals during an active session. Shavasana does not use camera capture. Practice Timeline media is processed and stored **only on your device** to build a local timelapse video. It is **not transmitted to Bakasana servers**. You can disable the feature, review or delete individual clips, or delete all Practice Timeline media from the App.
+If you enable **Practice Timeline**, the App uses the device camera during eligible practice sessions to create short, silent video clips. Bakasana, Plank, and Down Dog save a clip after qualifying holds of at least four seconds; Flow may save short clips at intervals during an active session. Shavasana does not use camera capture. Practice Timeline media is processed and stored **only on your device** to build a local timelapse video. It is **not transmitted to Bakasana servers**. You can disable the feature, review or delete individual clips, or delete all Practice Timeline media from the App.
 
 ### 1.4 Optional Notifications
 

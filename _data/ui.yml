@@ -3,6 +3,7 @@ en:
   nav:
     about: About
     guides: Guides
+    lessons: Lessons
     support: Support
   lang_switch: RU
   lang_switch_aria: Switch to Russian
@@ -16,7 +17,7 @@ en:
   author_label: Author
   published_label: Published
   updated_label: Updated
-  disclaimer: "Bakasana is a practice companion. It does not replace a yoga teacher, personalized instruction, or medical advice."
+  disclaimer: "Bakasana does not replace a yoga teacher, personalized instruction, or medical advice."
   guides_index_title: Guides
   guides_index_lede: On yoga, the body, attention, and the habit of returning — even when daily noise makes it easy to lose contact with yourself.
   breadcrumb_home: Home
@@ -29,6 +30,7 @@ ru:
   nav:
     about: О приложении
     guides: Гайды
+    lessons: Уроки
     support: Поддержка
   lang_switch: EN
   lang_switch_aria: Переключить на английский
@@ -42,7 +44,7 @@ ru:
   author_label: Автор
   published_label: Опубликовано
   updated_label: Обновлено
-  disclaimer: "Bakasana — напарник для регулярной практики. Приложение не заменяет преподавателя йоги, индивидуальные занятия или медицинскую консультацию."
+  disclaimer: "Bakasana не заменяет преподавателя йоги, индивидуальные занятия или медицинскую консультацию."
   guides_index_title: Гайды
   guides_index_lede: О йоге, теле, внимании и привычке возвращаться — даже когда в суете легко потерять контакт с собой.
   breadcrumb_home: Главная

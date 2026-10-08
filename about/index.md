@@ -5,12 +5,12 @@ bilingual: true
 ref: about
 schema: about
 title: About Bakasana
-seo_title: About Bakasana — an app for the skill of regularity
-description: "Bakasana is not a fitness app. It is a companion for the hardest skill: regularity. So you do not abandon what you started, and you move toward yourself — step by step."
+seo_title: About Bakasana — a yoga practice you return to
+description: "The social app for a yoga practice you want to return to. Log every practice, join challenges, and climb the board with friends."
 social_title: About Bakasana
-social_description: Not fitness. A personal companion that helps you keep going, build a habit, and return to yourself — step by step.
+social_description: Log every practice, join challenges, and climb the board with friends.
 main_class: container content-main
-last_modified_at: 2026-08-10
+last_modified_at: 2026-10-08
 ---
 
 <div class="legal-doc about-doc" markdown="1">
@@ -19,9 +19,7 @@ last_modified_at: 2026-08-10
 
 # About Bakasana
 
-Bakasana is a mobile yoga practice companion for iPhone and Android. It is built to help people practice consistently, track progress, and see their transformation over time—through balance, strength, free practice, recovery, and honest history.
-
-It is not a web trainer, not a sequence constructor, and not an app for a single pose.
+Bakasana is the social app for a yoga practice you want to return to, on iPhone and Android. Log every practice, join challenges, compete with friends, and climb the leaderboard. Five paths cover balance, strength, holds, free practice, and rest, plus Free Training so any other session still counts.
 
 ## Why Bakasana exists
 
@@ -31,19 +29,21 @@ Many people want a yoga habit they can return to, not another library of videos 
 
 Regular practice is more valuable than perfect practice. Bakasana encourages realistic goals, short sessions on busy days, and a calm relationship with streaks. Progress is measured in time spent, sessions completed, and what you notice in yourself—not in medical claims or dubious fitness scores.
 
-## Four programs
+## Five paths, plus Free Training
 
 | Program | Focus |
 | --- | --- |
-| **Bakasana** | Balance, core stability, and confidence toward arm balance |
+| **Bakasana** | Balance, focus, core control, and confidence toward crow pose |
 | **Plank** | Strength, endurance, and full-body stability |
-| **Shavasana** | Guided voice recovery and rest |
-| **Flow** | Free-form movement with optional Practice Timeline capture |
+| **Down Dog** | Spine length, shoulder strength, and a steady inverted V |
+| **Flow** | Your own yoga session, with optional clip capture |
+| **Shavasana** | Guided voice rest as part of regular practice |
+| **Free Training** | Any other session—pilates, calisthenics, boxing, cycling—so it still counts |
 
 ## How Bakasana works
 
 1. Review your practice history.
-2. Choose from four programs.
+2. Choose one of five paths, or log any other session with Free Training.
 3. Read the setup guide.
 4. Position your phone and begin.
 
@@ -82,6 +82,10 @@ You can practice in Guest Mode or sign in with Game Center (iPhone) or Play Game
 </div>
 </section>
 
+## Lessons
+
+Short classes with Alena are on the [Lessons](/lessons/) page. Log the session in the app when you want the streak, the film, and the board.
+
 ## Private Practice Timeline
 
 Camera access is optional. When enabled, Bakasana saves short, silent clips and builds a personal timelapse on your device. Clips are not uploaded to Bakasana servers. You can review, rebuild, save, share, or delete them whenever you choose. Read the [Privacy Policy](/privacy/).
@@ -92,7 +96,7 @@ Bakasana is publicly available on the App Store and Google Play. The current rel
 
 ## How Bakasana differs
 
-Unlike video libraries and generic workout apps, Bakasana does not try to replace a teacher with endless classes or auto-built sequences. It is a companion for the practice you already want: focused programs, timing, history, optional private video of *your* sessions, and light social motivation through leaderboards—on your phone, on your terms.
+Unlike video libraries and generic workout apps, Bakasana does not try to replace a teacher with endless classes or auto-built sequences. It is a place to return to practice, with people: focused programs, timing, history, an optional private film of *your* sessions, and challenges on the board—on your phone, on your terms.
 
 [Download on the App Store]({{ site.app.stores.ios.url }}){:target="_blank" rel="noopener noreferrer"} · [Get it on Google Play]({{ site.app.stores.android.url }}){:target="_blank" rel="noopener noreferrer"} · [Support](/support/)
 

@@ -1,0 +1,47 @@
+channel: https://www.youtube.com/@DaYogaAlena
+groups:
+  - label_en: Stretch
+    label_ru: Растяжка
+    lessons:
+      - id: BE96kYP58N0
+        title_en: A soft 10-minute stretch
+        title_ru: Йога мягкая растяжка 10 минут
+        detail_en: 10 minutes
+        detail_ru: 10 минут
+  - label_en: Main practice
+    label_ru: Основная часть
+    lessons:
+      - id: oRxvY1FINMo
+        title_en: Soft yoga for a healthy back
+        title_ru: Мягкая йога | здоровая спина
+      - id: 72as8PYniSQ
+        title_en: Yoga flow for continuing practitioners
+        title_ru: Йога для похудения | флоу для продолжающих
+      - id: GBYwn97ZLn4
+        title_en: Morning yoga, a 15-minute full-body start
+        title_ru: Йога утром. Зарядка 15 минут на все тело.
+        detail_en: 15 minutes
+        detail_ru: 15 минут
+      - id: _Jh_cs9QiGc
+        title_en: A 10-minute full-body wake-up
+        title_ru: Зарядка на все тело 10 минут
+        detail_en: 10 minutes
+        detail_ru: 10 минут
+      - id: ku7726iJcs8
+        title_en: 15 minutes for the whole body
+        title_ru: Йога 15 минут на все тело
+        detail_en: 15 minutes
+        detail_ru: 15 минут
+      - id: 8IVfmli9yHs
+        title_en: Strong legs in 15 minutes
+        title_ru: Йога сильные ноги 15 минут
+        detail_en: 15 minutes
+        detail_ru: 15 минут
+  - label_en: Rest
+    label_ru: Отдых
+    lessons:
+      - id: nLqGM8pQb3g
+        title_en: Shavasana
+        title_ru: Шавасана
+        detail_en: About 6 minutes
+        detail_ru: Около 6 минут

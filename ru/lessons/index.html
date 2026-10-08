@@ -1,0 +1,44 @@
+---
+layout: default
+lang: ru
+bilingual: true
+ref: lessons
+title: Уроки
+seo_title: Уроки Алёны Ткачевой — Bakasana
+description: "Короткие занятия йогой с Алёной Ткачевой. Практикуйте на коврике, а сессию отмечайте в Bakasana."
+social_title: Уроки Алёны Ткачевой
+social_description: Короткие занятия на YouTube. Отмечайте сессию в Bakasana — серия, фильм и рейтинг остаются в приложении.
+main_class: container content-main
+last_modified_at: 2026-10-08
+---
+
+<div class="legal-doc lessons-doc">
+  <p class="legal-eyebrow label-caps">Bakasana / Уроки</p>
+  <h1>Уроки Алёны Ткачевой</h1>
+  <p>Практикуйте с Алёной на коврике, а в Bakasana отмечайте сессию — серия, фильм и рейтинг остаются в приложении.</p>
+
+  {% for group in site.data.lessons.groups %}
+  <h2>{{ group.label_ru }}</h2>
+  <ul class="lesson-grid">
+    {% for lesson in group.lessons %}
+    <li>
+      <a class="lesson-card" href="https://www.youtube.com/watch?v={{ lesson.id }}" target="_blank" rel="noopener noreferrer" aria-label="Смотреть «{{ lesson.title_ru }}» на YouTube; откроется в новой вкладке">
+        <span class="lesson-thumb">
+          <img src="https://i.ytimg.com/vi/{{ lesson.id }}/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="lesson-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 7.5v9l8-4.5z"></path></svg>
+          </span>
+          {% if lesson.detail_ru %}<span class="lesson-length label-caps">{{ lesson.detail_ru }}</span>{% endif %}
+        </span>
+        <span class="lesson-copy">
+          <span class="label-caps">Видео</span>
+          <strong>{{ lesson.title_ru }}</strong>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+
+  <p class="lessons-channel">Все занятия — на <a href="{{ site.data.lessons.channel }}" target="_blank" rel="noopener noreferrer">YouTube-канале Алёны <span aria-hidden="true">↗</span></a>.</p>
+</div>
