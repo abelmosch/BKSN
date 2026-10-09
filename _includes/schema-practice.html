@@ -1,0 +1,149 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ ui.breadcrumb_home | jsonify }},
+          "item": "{{ site.production_url }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ ui.nav.practice | jsonify }},
+          "item": "{{ site.production_url }}/practices/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | jsonify }},
+          "item": "{{ canonical_url }}"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "{{ canonical_url }}#app",
+      "name": {{ page.title | jsonify }},
+      "url": "{{ canonical_url }}",
+      "description": {{ page.description | jsonify }},
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "image": "{{ social_image_url }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bakasana",
+        "url": "{{ site.production_url }}/"
+      },
+      "isPartOf": { "@id": "https://bakasana.app/#website" }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "{{ canonical_url }}#howto",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Pranamasana — Prayer Pose",
+          "text": "Exhale. Palms together at the heart.",
+          "url": "{{ canonical_url }}#step-01"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Hasta Uttanasana — Raised Arms Pose",
+          "text": "Inhale. Reach the arms up and open the chest.",
+          "url": "{{ canonical_url }}#step-02"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Padahastasana — Standing Forward Bend",
+          "text": "Exhale. Fold from the hips. Soften the knees if you need to.",
+          "url": "{{ canonical_url }}#step-03"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Ashwa Sanchalanasana — Equestrian Pose",
+          "text": "Inhale. Right leg steps back. Front knee over the ankle.",
+          "url": "{{ canonical_url }}#step-04"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Dandasana — Plank",
+          "text": "Hold or exhale. Body in one line from heels to crown.",
+          "url": "{{ canonical_url }}#step-05"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Ashtanga Namaskara — Eight-Point Salute",
+          "text": "Exhale. Knees, chest, and chin come to the floor.",
+          "url": "{{ canonical_url }}#step-06"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Bhujangasana — Cobra Pose",
+          "text": "Inhale. Press the hands down and lift the chest.",
+          "url": "{{ canonical_url }}#step-07"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Adho Mukha Svanasana — Downward-Facing Dog",
+          "text": "Exhale. Hips lift. Heels move toward the floor.",
+          "url": "{{ canonical_url }}#step-08"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Ashwa Sanchalanasana — Equestrian Pose",
+          "text": "Inhale. Right foot steps forward between the hands.",
+          "url": "{{ canonical_url }}#step-09"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Padahastasana — Standing Forward Bend",
+          "text": "Exhale. Fold from the hips again.",
+          "url": "{{ canonical_url }}#step-10"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 11,
+          "name": "Hasta Uttanasana — Raised Arms Pose",
+          "text": "Inhale. Rise all the way up and reach.",
+          "url": "{{ canonical_url }}#step-11"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 12,
+          "name": "Pranamasana — Prayer Pose",
+          "text": "Exhale. Palms return to the heart.",
+          "url": "{{ canonical_url }}#step-12"
+        }
+      ]
+    }
+  ]
+}
+</script>

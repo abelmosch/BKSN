@@ -415,7 +415,10 @@
     if (poseIndex !== session.poseShown || roundIndex !== session.roundShown) {
       session.poseShown = poseIndex;
       session.roundShown = roundIndex;
-      if (figureEl) figureEl.src = figureBase + pose.figure;
+      if (figureEl) {
+        figureEl.src = figureBase + pose.figure;
+        figureEl.alt = pose.english + ", " + pose.sanskrit;
+      }
       announce(roundIndex + 1, pose);
     }
   }

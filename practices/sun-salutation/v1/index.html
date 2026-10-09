@@ -1,13 +1,14 @@
 ---
 layout: practice
 title: Sun Salutation
-seo_title: Sun Salutation
-description: A simple sun salutation timer. Twelve poses, with a choice of pace and sound.
-robots: noindex, nofollow
-sitemap: false
+seo_title: "Sun Salutation online — free Surya Namaskar timer"
+description: "Practice Surya Namaskar in the browser. Twelve poses, one breath each, at 3, 4, or 5 seconds. Choose 5, 10, 20, 50, or 108 cycles. No account."
+robots: index, follow
+schema: practice
+last_modified_at: 2026-10-09
 stylesheet: /assets/practice/sun-salutation/v1/practice.css
 script: /assets/practice/sun-salutation/v1/practice.js
-asset_rev: "20261009g"
+asset_rev: "20261009h"
 extra_fonts: https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@800&family=JetBrains+Mono:wght@500;600;700&display=swap
 ---
 
@@ -17,6 +18,7 @@ extra_fonts: https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@800&fa
       <p class="studio-kicker">Warm-up</p>
       <h1 id="practice-title">Sun Salutation</h1>
       <p class="studio-lede" data-lede>Twelve poses, 4 seconds each.</p>
+      <p class="studio-summary">Practice Surya Namaskar here. Set each pose to 3, 4, or 5 seconds, then repeat the cycle 5, 10, 20, 50, or 108 times.</p>
 
       <div class="studio-field">
         <p class="studio-kicker" id="rounds-label">Cycles</p>
@@ -57,6 +59,25 @@ extra_fonts: https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@800&fa
       </div>
 
       <button type="button" class="studio-start" data-action="start">Start practice</button>
+
+      <details class="studio-sequence">
+        <summary>Twelve poses</summary>
+        <ol class="studio-sequence-list">
+          <li id="step-01"><span class="studio-sequence-name">Pranamasana</span> <span class="studio-sequence-english">Prayer Pose</span>. <span class="studio-sequence-breath">Exhale</span>. Palms together at the heart.</li>
+          <li id="step-02"><span class="studio-sequence-name">Hasta Uttanasana</span> <span class="studio-sequence-english">Raised Arms Pose</span>. <span class="studio-sequence-breath">Inhale</span>. Reach the arms up and open the chest.</li>
+          <li id="step-03"><span class="studio-sequence-name">Padahastasana</span> <span class="studio-sequence-english">Standing Forward Bend</span>. <span class="studio-sequence-breath">Exhale</span>. Fold from the hips. Soften the knees if you need to.</li>
+          <li id="step-04"><span class="studio-sequence-name">Ashwa Sanchalanasana</span> <span class="studio-sequence-english">Equestrian Pose</span>. <span class="studio-sequence-breath">Inhale</span>. Right leg steps back. Front knee over the ankle.</li>
+          <li id="step-05"><span class="studio-sequence-name">Dandasana</span> <span class="studio-sequence-english">Plank</span>. <span class="studio-sequence-breath">Hold or exhale</span>. Body in one line from heels to crown.</li>
+          <li id="step-06"><span class="studio-sequence-name">Ashtanga Namaskara</span> <span class="studio-sequence-english">Eight-Point Salute</span>. <span class="studio-sequence-breath">Exhale</span>. Knees, chest, and chin come to the floor.</li>
+          <li id="step-07"><span class="studio-sequence-name">Bhujangasana</span> <span class="studio-sequence-english">Cobra Pose</span>. <span class="studio-sequence-breath">Inhale</span>. Press the hands down and lift the chest.</li>
+          <li id="step-08"><span class="studio-sequence-name">Adho Mukha Svanasana</span> <span class="studio-sequence-english">Downward-Facing Dog</span>. <span class="studio-sequence-breath">Exhale</span>. Hips lift. Heels move toward the floor.</li>
+          <li id="step-09"><span class="studio-sequence-name">Ashwa Sanchalanasana</span> <span class="studio-sequence-english">Equestrian Pose</span>. <span class="studio-sequence-breath">Inhale</span>. Right foot steps forward between the hands.</li>
+          <li id="step-10"><span class="studio-sequence-name">Padahastasana</span> <span class="studio-sequence-english">Standing Forward Bend</span>. <span class="studio-sequence-breath">Exhale</span>. Fold from the hips again.</li>
+          <li id="step-11"><span class="studio-sequence-name">Hasta Uttanasana</span> <span class="studio-sequence-english">Raised Arms Pose</span>. <span class="studio-sequence-breath">Inhale</span>. Rise all the way up and reach.</li>
+          <li id="step-12"><span class="studio-sequence-name">Pranamasana</span> <span class="studio-sequence-english">Prayer Pose</span>. <span class="studio-sequence-breath">Exhale</span>. Palms return to the heart.</li>
+        </ol>
+      </details>
+      <p class="studio-guide"><a href="{{ '/guides/surya-namaskar/' | relative_url }}">What Surya Namaskar is</a></p>
     </div>
   </section>
 
@@ -93,7 +114,7 @@ extra_fonts: https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@800&fa
 
           <div class="studio-hero">
             <div class="studio-figure-frame">
-              <img class="studio-figure" data-figure alt="" src="{{ '/assets/practice/sun-salutation/v0/images/prayer.svg' | relative_url }}">
+              <img class="studio-figure" data-figure alt="Prayer Pose, Pranamasana" src="{{ '/assets/practice/sun-salutation/v0/images/prayer.svg' | relative_url }}">
             </div>
             <p class="studio-cycle">
               <span class="studio-cycle-num" data-cycle>01</span>

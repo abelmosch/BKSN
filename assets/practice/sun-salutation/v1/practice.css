@@ -122,10 +122,68 @@ body.practice-session main {
   color: var(--studio-muted);
 }
 
-.studio-lede {
+.studio-lede,
+.studio-summary {
   margin: 0;
   color: var(--studio-muted);
   font-size: 1.05rem;
+}
+
+.studio-summary {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.studio-sequence {
+  width: 100%;
+}
+
+.studio-sequence summary {
+  color: var(--studio-ink);
+  cursor: pointer;
+  font-family: var(--studio-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.studio-sequence summary::-webkit-details-marker {
+  display: none;
+}
+
+.studio-sequence-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.studio-sequence-list li {
+  padding-block: 0.45rem;
+  border-bottom: 1px solid var(--studio-line);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.studio-sequence-list li:last-child {
+  border-bottom: 0;
+}
+
+.studio-sequence-name {
+  font-weight: 700;
+}
+
+.studio-sequence-breath {
+  color: var(--studio-muted);
+}
+
+.studio-guide {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.studio-guide a {
+  color: inherit;
 }
 
 .studio-field {

@@ -1,34 +1,18 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
 # Bakasana
 
-> Bakasana is not a fitness app. It is a mobile companion for the hardest skill: regularity — so you keep returning to practice, step by step.
+> The social app for a yoga practice you want to return to.
 
-Bakasana is not a web trainer, not a sequence builder, and not an app for a single pose. Practice happens in the app. This website explains the product, the practice approach, and support.
+Bakasana is a practice app for iPhone and Android. The sun salutation timer on this site is free in the browser and does not need an account.
 
-Brand line: Build a yoga practice you want to return to.
-Closing line: Find your balance. Return to practice.
+## Practices
 
-The app includes four programs — Bakasana (balance), Plank (strength), Shavasana (recovery), and Flow (free-form movement) — plus guided sessions, streaks, progress tracking, and a private on-device Practice Timeline.
+- [Sun Salutation](https://bakasana.app/practices/sun-salutation/v1/): Free in-browser Surya Namaskar timer. Twelve poses, one breath each. Set each pose to 3, 4, or 5 seconds, then repeat for 5, 10, 20, 50, or 108 cycles. Sound can be a tick, a bowl, breath, or a voice that names the pose.
 
-## English
+## Guides
 
-- [Home](https://bakasana.app/): Product overview, four programs, Practice Timeline, FAQ, and download links
-- [About](https://bakasana.app/about/): Why Bakasana exists — not as fitness, but as a companion for regularity
-- [Guides](https://bakasana.app/guides/): On yoga, the body, attention, and the habit of returning
-- [Bakasana Is Foundational—and Here’s Why](https://bakasana.app/guides/bakasana-is-foundational-and-here-is-why/): Why Bakasana is foundational, and how practice teaches you to start again and keep going
-- [Support](https://bakasana.app/support/): Help with the app, accounts, programs, reminders, and Practice Timeline
-- [Privacy Policy](https://bakasana.app/privacy/): How Bakasana collects, uses, stores, and protects information
-
-## Русский
-
-- [Главная](https://bakasana.app/ru/): Обзор приложения, четыре программы, Practice Timeline, FAQ и ссылки на скачивание
-- [О приложении](https://bakasana.app/ru/about/): Зачем появилась Bakasana — не как фитнес, а как помощник для навыка регулярности
-- [Гайды](https://bakasana.app/ru/guides/): О йоге, теле, внимании и привычке возвращаться
-- [Бакасана — это база. И вот почему](https://bakasana.app/ru/guides/bakasana-is-foundational-and-here-is-why/): Почему Бакасана — это база, и как практика учит начинать сначала и продолжать
-
-## Optional
-
-- [Terms of Service](https://bakasana.app/terms/): Terms for using the Bakasana mobile app
-- [Delete account and data](https://bakasana.app/delete-account/): How to delete Bakasana data on iPhone and Android
-- [App Store](https://apps.apple.com/app/bakasana/id6776696295): Download Bakasana for iPhone
-- [Google Play](https://play.google.com/store/apps/details?id=com.bakasana.bakasana_app): Download Bakasana for Android
-- [Instagram](https://www.instagram.com/bakasana.app/): @bakasana.app
+- [Surya Namaskar, and Why to Practice It with Bakasana](https://bakasana.app/guides/surya-namaskar/): What the twelve-pose sun salutation is, and how the timer keeps the count, the pace, and the cycle.

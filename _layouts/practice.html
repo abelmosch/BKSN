@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+{% assign ui = site.data.ui.en %}
+{% assign brand = site.data.brand.en %}
+{% assign enabled_social_links = site.social_links | where: 'enabled', true %}
+{% if page.canonical %}
+  {% assign canonical_url = page.canonical %}
+{% else %}
+  {% assign canonical_url = site.production_url | append: page.url %}
+{% endif %}
+{% assign social_title = page.social_title | default: page.seo_title | default: page.title %}
+{% assign social_description = page.description %}
+{% assign social_image_url = site.production_url | append: '/assets/og/bakasana-preview.jpg' %}
+{% assign social_image_alt = page.social_image_alt | default: "The social app for a yoga practice you want to return to" %}
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,8 +18,35 @@
   <title>{{ page.seo_title | default: page.title }}</title>
   <meta name="description" content="{{ page.description }}">
   <meta name="robots" content="{{ page.robots | default: 'noindex, nofollow' }}">
+  <meta name="author" content="Bakasana">
   <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="{{ canonical_url }}">
   <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Bakasana">
+  <meta property="og:title" content="{{ social_title }}">
+  <meta property="og:description" content="{{ social_description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ social_image_url }}">
+  <meta property="og:image:secure_url" content="{{ social_image_url }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ social_image_alt }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ social_title }}">
+  <meta name="twitter:description" content="{{ social_description }}">
+  <meta name="twitter:image" content="{{ social_image_url }}">
+  <meta name="twitter:image:alt" content="{{ social_image_alt }}">
+  {% unless page.robots contains 'noindex' %}
+  {% if page.schema == 'practice' %}
+  {% include schema-practice.html %}
+  {% endif %}
+  {% endunless %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.app.version }}{% if page.asset_rev %}-{{ page.asset_rev }}{% endif %}">
   <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}?v={{ page.asset_rev | default: site.app.version }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +57,6 @@
   {% endif %}
 </head>
 <body class="practice-page">
-  {% assign ui = site.data.ui.en %}
-  {% assign brand = site.data.brand.en %}
-  {% assign enabled_social_links = site.social_links | where: 'enabled', true %}
   <a class="skip-link" href="#main-content">{{ ui.skip }}</a>
 
   <header class="site-header">
