@@ -8,7 +8,7 @@ title: Guides
 seo_title: Bakasana Guides — returning to practice
 description: "On yoga, the body, attention, and the hardest skill: regularity. So you do not abandon what you started, and you return to yourself."
 main_class: container content-main
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-09
 ---
 
 <div class="legal-doc guides-index" markdown="1">
@@ -25,6 +25,13 @@ last_modified_at: 2026-08-12
       <span class="label-caps">Guide 01</span>
       <strong>Bakasana Is Foundational—and Here’s Why</strong>
       <p>Why Bakasana is foundational, and how practice teaches you not to abandon what you started — even when it still feels out of reach.</p>
+    </a>
+  </li>
+  <li>
+    <a href="{{ '/guides/surya-namaskar/' | relative_url }}">
+      <span class="label-caps">Guide 02</span>
+      <strong>Surya Namaskar, and Why to Practice It with Bakasana</strong>
+      <p>Twelve poses, one breath each, repeated. How the Bakasana timer keeps the pace and the cycle so you can stay in the practice.</p>
     </a>
   </li>
 </ul>

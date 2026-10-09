@@ -8,7 +8,7 @@ title: Гайды
 seo_title: Гайды Bakasana — возвращаться к практике
 description: О йоге, теле, внимании и самом сложном навыке — регулярности. Чтобы не бросать начатое и возвращаться к себе.
 main_class: container content-main
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-09
 ---
 
 <div class="legal-doc guides-index" markdown="1">
@@ -25,6 +25,13 @@ last_modified_at: 2026-08-12
       <span class="label-caps">Гайд 01</span>
       <strong>Бакасана — это база. И вот почему</strong>
       <p>Почему Бакасана — это база, и как практика учит не бросать начатое, даже когда пока не получается.</p>
+    </a>
+  </li>
+  <li>
+    <a href="{{ '/ru/guides/surya-namaskar/' | relative_url }}">
+      <span class="label-caps">Гайд 02</span>
+      <strong>Сурья Намаскар — и зачем делать её с Bakasana</strong>
+      <p>Двенадцать поз, одно дыхание на каждую, цикл за циклом. Как таймер Bakasana держит темп и номер цикла, чтобы вы оставались в практике.</p>
     </a>
   </li>
 </ul>

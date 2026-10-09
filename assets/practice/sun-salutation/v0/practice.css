@@ -1,0 +1,354 @@
+.practice-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(calc(100% - (var(--page-gutter) * 2)), 40rem);
+  margin-inline: auto;
+  padding-block: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+body.practice-session {
+  min-height: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body.practice-session .site-header,
+body.practice-session .site-footer {
+  display: none;
+}
+
+body.practice-session main {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body.practice-session .practice {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  justify-content: stretch;
+}
+
+.practice {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.practice-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.practice-screen[hidden] {
+  display: none;
+}
+
+.practice-screen h1,
+.practice-sanskrit {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.practice-screen h1 {
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 0.9;
+}
+
+.practice-screen--choose h1 {
+  font-size: clamp(2.4rem, 8vw, 4rem);
+}
+
+.practice-lede {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.practice-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.practice-field .label-caps {
+  color: var(--smoke);
+}
+
+.practice-rounds,
+.practice-sounds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.practice-sound {
+  min-width: 5.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.practice-hear {
+  min-height: 2.75rem;
+  cursor: pointer;
+}
+
+.practice-settings {
+  width: min(100%, 22rem);
+}
+
+.practice-settings summary {
+  color: var(--smoke);
+  cursor: pointer;
+  list-style: none;
+}
+
+.practice-settings summary::-webkit-details-marker {
+  display: none;
+}
+
+.practice-settings[open] summary {
+  color: var(--ink);
+}
+
+.practice-voice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: 0.7rem;
+}
+
+.practice-voice select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--ink);
+  border-radius: 9999px;
+  color: var(--ink);
+  background: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+.practice-round {
+  min-width: 4.25rem;
+  min-height: 3.75rem;
+  padding: 0 1rem;
+  border: 1px solid var(--ink);
+  border-radius: 9999px;
+  color: var(--ink);
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.practice-round[aria-pressed="true"] {
+  color: var(--white);
+  background: var(--ink);
+}
+
+.practice-start {
+  margin-top: 0.75rem;
+  min-width: 9rem;
+  cursor: pointer;
+}
+
+.practice-start:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.practice-screen--run {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding:
+    max(5.6rem, calc(env(safe-area-inset-top) + 4.75rem))
+    max(1rem, env(safe-area-inset-right))
+    max(0.75rem, env(safe-area-inset-bottom))
+    max(1rem, env(safe-area-inset-left));
+  overflow: hidden;
+}
+
+.practice-stage {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: min(100%, 40rem);
+  min-height: 0;
+}
+
+.practice-stage > :not(.practice-figure-slot):not(.practice-status) {
+  flex: 0 0 auto;
+}
+
+.practice-round-count {
+  position: absolute;
+  top: max(0.85rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35em;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 6.6vw, 3.9rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.practice-round-now {
+  font-variant-numeric: tabular-nums;
+}
+
+.practice-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+  margin: 0;
+  color: var(--smoke);
+}
+
+.practice-figure-slot {
+  position: relative;
+  flex: 1 1 0;
+  width: 100%;
+  min-height: 0;
+  max-height: clamp(8.45rem, 31.2vw, 14.3rem);
+  margin-block: 1rem;
+}
+
+.practice-figure {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.25);
+}
+
+.practice-seconds {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.225rem, 15.6vw, 6.5rem);
+  font-weight: 600;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.practice-sanskrit {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 0.95;
+}
+
+.practice-screen--run .practice-sanskrit {
+  width: 100%;
+  font-size: clamp(0.665rem, 3.08vw, 1.085rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.practice-english,
+.practice-breath,
+.practice-cue,
+.practice-status {
+  margin: 0;
+}
+
+.practice-english {
+  color: var(--ink-soft);
+  font-size: 0.805rem;
+}
+
+.practice-screen--run .practice-meta {
+  font-size: 0.5rem;
+}
+
+.practice-breath,
+.practice-status {
+  color: var(--ink);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.practice-cue {
+  color: var(--smoke);
+}
+
+.practice-status {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+}
+
+.practice-status[hidden] {
+  display: none;
+}
+
+.practice-controls {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  width: min(100%, 40rem);
+}
+
+.practice-controls .btn {
+  min-width: 8rem;
+  cursor: pointer;
+}
+
+.practice-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,23 @@
+<dialog class="practice-done" data-done-dialog aria-labelledby="practice-done-title">
+  <div class="practice-done-panel">
+    <div class="practice-done-head">
+      <p class="practice-done-kicker">Sun Salutation</p>
+      <button type="button" class="practice-done-close" data-action="close">Close</button>
+    </div>
+    <h2 id="practice-done-title" data-done-title tabindex="-1">Finished</h2>
+    <p class="practice-done-summary" data-done-summary></p>
+    <p class="practice-done-lede">Download Bakasana for iPhone or Android and start a focused practice whenever you are ready.</p>
+    <figure class="download-qr">
+      <img src="{{ '/assets/qr-codes/download.svg' | relative_url }}" width="200" height="200" alt="QR code to download Bakasana for iPhone or Android">
+      <figcaption>
+        <strong>Scan to download the app</strong>
+        <span>Opens the right store for your phone</span>
+      </figcaption>
+    </figure>
+    <div class="beta-platforms" aria-label="Download availability">
+      <a href="{{ site.app.stores.ios.url }}" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store; opens in a new tab"><span class="store-platform"><svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="2.5" width="13" height="19" rx="3"></rect><path d="M9.5 5h5M10 18.5h4"></path></svg>iOS</span><strong>Download on the App Store <span aria-hidden="true">↗</span></strong></a>
+      <a href="{{ site.app.stores.android.url }}" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play; opens in a new tab"><span class="store-platform"><svg class="store-icon store-icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5 19 12 5 20.5Z"></path><path d="m5 3.5 9.5 11.25M5 20.5l9.5-11.25"></path></svg>Google Play</span><strong>Get it on Google Play <span aria-hidden="true">↗</span></strong></a>
+    </div>
+    <button type="button" class="practice-done-again" data-action="again">Again</button>
+  </div>
+</dialog>

@@ -1,6 +1,7 @@
 en:
   skip: Skip to content
   nav:
+    practice: Practices
     about: About
     guides: Guides
     lessons: Lessons
@@ -20,6 +21,8 @@ en:
   disclaimer: "Bakasana does not replace a yoga teacher, personalized instruction, or medical advice."
   guides_index_title: Guides
   guides_index_lede: On yoga, the body, attention, and the habit of returning — even when daily noise makes it easy to lose contact with yourself.
+  practices_index_title: Practices
+  practices_index_lede: Timed sequences you can start here. Choose a program, set the pace, and stay with the cycle.
   breadcrumb_home: Home
   breadcrumb_guides: Guides
   guide_download_prompt: Haven’t downloaded Bakasana yet?
@@ -28,6 +31,7 @@ en:
 ru:
   skip: Перейти к содержанию
   nav:
+    practice: Практика
     about: О приложении
     guides: Гайды
     lessons: Уроки

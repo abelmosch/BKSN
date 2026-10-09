@@ -1,0 +1,89 @@
+---
+layout: practice
+title: Sun Salutation
+seo_title: Sun Salutation
+description: A simple sun salutation timer. Twelve poses, with a choice of pace and sound.
+robots: noindex, nofollow
+sitemap: false
+stylesheet: /assets/practice/sun-salutation/v0/practice.css
+script: /assets/practice/sun-salutation/v0/practice.js
+asset_rev: "20261009g"
+---
+
+<div class="practice" data-practice data-figures="{{ '/assets/practice/sun-salutation/v0/images/' | relative_url }}">
+  <section class="practice-screen practice-screen--choose" data-screen="choose">
+    <p class="label-caps">Warm-up</p>
+    <h1 id="practice-title">Sun Salutation</h1>
+    <p class="practice-lede" data-lede>Twelve poses, 4 seconds each.</p>
+
+    <div class="practice-field">
+      <p class="label-caps" id="rounds-label">Cycles</p>
+      <div class="practice-rounds" role="group" aria-labelledby="rounds-label">
+        <button type="button" class="practice-round" data-rounds="5" aria-pressed="true">5</button>
+        <button type="button" class="practice-round" data-rounds="10" aria-pressed="false">10</button>
+        <button type="button" class="practice-round" data-rounds="20" aria-pressed="false">20</button>
+        <button type="button" class="practice-round" data-rounds="50" aria-pressed="false">50</button>
+        <button type="button" class="practice-round" data-rounds="108" aria-pressed="false">108</button>
+      </div>
+    </div>
+
+    <div class="practice-field">
+      <p class="label-caps" id="seconds-label">Seconds</p>
+      <div class="practice-rounds" role="group" aria-labelledby="seconds-label">
+        <button type="button" class="practice-round" data-pose-seconds="3" aria-pressed="false">3</button>
+        <button type="button" class="practice-round" data-pose-seconds="4" aria-pressed="true">4</button>
+        <button type="button" class="practice-round" data-pose-seconds="5" aria-pressed="false">5</button>
+      </div>
+    </div>
+
+    <div class="practice-field">
+      <p class="label-caps" id="sound-label">Sound</p>
+      <div class="practice-sounds" role="group" aria-labelledby="sound-label">
+        <button type="button" class="practice-round practice-sound" data-sound="tick" aria-pressed="false">Tick</button>
+        <button type="button" class="practice-round practice-sound" data-sound="bowl" aria-pressed="false">Bowl</button>
+        <button type="button" class="practice-round practice-sound" data-sound="breath" aria-pressed="false">Breath</button>
+        <button type="button" class="practice-round practice-sound" data-sound="voice" aria-pressed="true">Voice</button>
+      </div>
+      <button type="button" class="btn btn-outline practice-hear" data-action="preview">Hear</button>
+      <details class="practice-settings">
+        <summary class="label-caps">Settings</summary>
+        <label class="practice-voice" data-voice-field>
+          <span class="label-caps" id="voice-label">Voice</span>
+          <select data-voice aria-labelledby="voice-label"></select>
+        </label>
+      </details>
+    </div>
+
+    <button type="button" class="btn btn-primary practice-start" data-action="start">Start</button>
+  </section>
+
+  <section class="practice-screen practice-screen--run" data-screen="run" hidden>
+    <p class="practice-round-count">
+      <span class="practice-round-kicker">Cycle</span>
+      <span class="practice-round-now" data-round>1</span>
+      <span class="practice-round-of" data-round-of>of 5</span>
+    </p>
+    <div class="practice-stage">
+      <div class="practice-figure-slot">
+        <img class="practice-figure" data-figure alt="" src="{{ '/assets/practice/sun-salutation/v0/images/prayer.svg' | relative_url }}">
+      </div>
+      <p class="practice-breath" data-breath>Exhale</p>
+      <p class="practice-seconds" data-seconds aria-hidden="true">4</p>
+      <h1 class="practice-sanskrit" data-sanskrit tabindex="-1">Pranamasana</h1>
+      <p class="practice-english" data-english>Prayer Pose</p>
+      <p class="practice-meta label-caps">
+        <span data-pose-index>Pose 1 of 12</span>
+      </p>
+      <p class="practice-cue label-caps" data-cue hidden></p>
+      <p class="practice-status" data-status hidden>Paused</p>
+    </div>
+    <div class="practice-controls">
+      <button type="button" class="btn btn-primary" data-action="pause" aria-pressed="false">Pause</button>
+      <button type="button" class="btn btn-outline" data-action="end">End</button>
+    </div>
+  </section>
+
+  {% include practice-done-dialog.html %}
+
+  <p class="practice-live" data-live aria-live="polite"></p>
+</div>

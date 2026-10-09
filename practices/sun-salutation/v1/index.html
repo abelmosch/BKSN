@@ -1,0 +1,220 @@
+---
+layout: practice
+title: Sun Salutation
+seo_title: Sun Salutation
+description: A simple sun salutation timer. Twelve poses, with a choice of pace and sound.
+robots: noindex, nofollow
+sitemap: false
+stylesheet: /assets/practice/sun-salutation/v1/practice.css
+script: /assets/practice/sun-salutation/v1/practice.js
+asset_rev: "20261009g"
+extra_fonts: https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@800&family=JetBrains+Mono:wght@500;600;700&display=swap
+---
+
+<div class="studio" data-practice data-figures="{{ '/assets/practice/sun-salutation/v0/images/' | relative_url }}">
+  <section class="studio-screen studio-setup" data-screen="choose">
+    <div class="studio-setup-plate">
+      <p class="studio-kicker">Warm-up</p>
+      <h1 id="practice-title">Sun Salutation</h1>
+      <p class="studio-lede" data-lede>Twelve poses, 4 seconds each.</p>
+
+      <div class="studio-field">
+        <p class="studio-kicker" id="rounds-label">Cycles</p>
+        <div class="studio-choices" role="group" aria-labelledby="rounds-label">
+          <button type="button" class="studio-choice" data-rounds="5" aria-pressed="true">5</button>
+          <button type="button" class="studio-choice" data-rounds="10" aria-pressed="false">10</button>
+          <button type="button" class="studio-choice" data-rounds="20" aria-pressed="false">20</button>
+          <button type="button" class="studio-choice" data-rounds="50" aria-pressed="false">50</button>
+          <button type="button" class="studio-choice" data-rounds="108" aria-pressed="false">108</button>
+        </div>
+      </div>
+
+      <div class="studio-field">
+        <p class="studio-kicker" id="seconds-label">Seconds</p>
+        <div class="studio-choices" role="group" aria-labelledby="seconds-label">
+          <button type="button" class="studio-choice" data-pose-seconds="3" aria-pressed="false">3</button>
+          <button type="button" class="studio-choice" data-pose-seconds="4" aria-pressed="true">4</button>
+          <button type="button" class="studio-choice" data-pose-seconds="5" aria-pressed="false">5</button>
+        </div>
+      </div>
+
+      <div class="studio-field">
+        <p class="studio-kicker" id="sound-label">Sound</p>
+        <div class="studio-choices" role="group" aria-labelledby="sound-label">
+          <button type="button" class="studio-choice studio-choice--word" data-sound="tick" aria-pressed="false">Tick</button>
+          <button type="button" class="studio-choice studio-choice--word" data-sound="bowl" aria-pressed="false">Bowl</button>
+          <button type="button" class="studio-choice studio-choice--word" data-sound="breath" aria-pressed="false">Breath</button>
+          <button type="button" class="studio-choice studio-choice--word" data-sound="voice" aria-pressed="true">Voice</button>
+        </div>
+        <button type="button" class="studio-text-btn" data-action="preview">Hear</button>
+        <details class="studio-settings">
+          <summary>Voice settings</summary>
+          <label class="studio-voice">
+            <span class="studio-kicker" id="voice-label">Voice</span>
+            <select data-voice aria-labelledby="voice-label"></select>
+          </label>
+        </details>
+      </div>
+
+      <button type="button" class="studio-start" data-action="start">Start practice</button>
+    </div>
+  </section>
+
+  <section class="studio-screen studio-run" data-screen="run" tabindex="-1" hidden>
+    <div class="studio-strip">
+      <div class="studio-wrap studio-strip-row">
+        <p class="studio-strip-lead">
+          <span class="studio-strip-name">Surya Namaskar</span>
+          <span class="studio-strip-sep" aria-hidden="true">/</span>
+          <span data-round-label>Cycle 01 / 05</span>
+          <span class="studio-strip-sep studio-strip-sep--step" aria-hidden="true">/</span>
+          <span class="studio-strip-step" data-step-label>Step 01 / 12</span>
+        </p>
+        <p class="studio-strip-time">
+          <span class="studio-paused" data-paused hidden>Paused</span>
+          <span data-clock>00:00 total</span>
+        </p>
+      </div>
+      <div class="studio-meter" aria-hidden="true"><span data-meter></span></div>
+    </div>
+
+    <div class="studio-stage">
+      <div class="studio-wrap studio-stage-grid">
+        <div class="studio-dial">
+          <div class="studio-marks" aria-hidden="true">
+            <span>+</span><span>+</span><span>+</span><span>+</span>
+          </div>
+          <div class="studio-rail">
+            <p class="studio-drishti">
+              <span data-gaze>Gaze: nose tip</span>
+            </p>
+            <p class="studio-rail-note"><span data-family-live>Standing</span></p>
+          </div>
+
+          <div class="studio-hero">
+            <div class="studio-figure-frame">
+              <img class="studio-figure" data-figure alt="" src="{{ '/assets/practice/sun-salutation/v0/images/prayer.svg' | relative_url }}">
+            </div>
+            <p class="studio-cycle">
+              <span class="studio-cycle-num" data-cycle>01</span>
+              <span class="studio-cycle-label">Cycle</span>
+              <span class="studio-cycle-of" data-cycle-of>of 05</span>
+            </p>
+          </div>
+
+          <div class="studio-readout">
+            <p><span>Breath</span> <strong data-readout-breath>Exhale</strong></p>
+            <p><span>Hold</span> <strong data-readout-hold>4.0s</strong></p>
+            <p><span>Align</span> <strong data-align>Heart</strong></p>
+          </div>
+        </div>
+
+        <div class="studio-side">
+          <div class="studio-breath">
+            <div class="studio-breath-kicker">
+              <span>Breath</span>
+              <span data-breath-duration>4.0s</span>
+            </div>
+            <div>
+              <div class="studio-breath-row">
+                <h2 data-breath>Exhale</h2>
+                <p class="studio-breath-time" data-breath-time>4.0<span>s</span></p>
+              </div>
+              <p class="studio-breath-line" data-line>Palms together at the heart.</p>
+            </div>
+            <div class="studio-breath-track" aria-hidden="true">
+              <div class="studio-breath-bar" data-breath-bar></div>
+            </div>
+          </div>
+
+          <div class="studio-pose">
+            <div>
+              <div class="studio-pose-kicker">
+                <span data-step-chip>Step 01 / 12</span>
+                <span data-family>Standing</span>
+              </div>
+              <h1 class="studio-name" data-sanskrit tabindex="-1">Pranamasana</h1>
+              <p class="studio-english">
+                <span data-english>Prayer Pose</span>
+                <span data-cue-wrap hidden><span aria-hidden="true"> — </span><span data-cue></span></span>
+              </p>
+            </div>
+            <div class="studio-next">
+              <p class="studio-next-kicker">
+                <span data-next-in>Up next in 04s</span>
+                <span data-next-step>Next: step 02</span>
+              </p>
+              <p class="studio-next-name">
+                <span data-next-name>Hasta Uttanasana</span>
+                <span data-next-breath>Inhale · 4.0s</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="studio-matrix">
+            <div class="studio-matrix-kicker">
+              <span>Sequence</span>
+              <span data-round-chip>Cycle 01 / 05</span>
+            </div>
+            <div class="studio-steps" data-steps aria-hidden="true">
+              <div class="studio-step is-now">01</div>
+              <div class="studio-step">02</div>
+              <div class="studio-step">03</div>
+              <div class="studio-step">04</div>
+              <div class="studio-step">05</div>
+              <div class="studio-step">06</div>
+              <div class="studio-step">07</div>
+              <div class="studio-step">08</div>
+              <div class="studio-step">09</div>
+              <div class="studio-step">10</div>
+              <div class="studio-step">11</div>
+              <div class="studio-step">12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="studio-deck">
+      <div class="studio-wrap studio-deck-bar">
+        <div class="studio-deck-tools">
+          <button type="button" class="studio-tool" data-action="mute" aria-pressed="false" aria-label="Sound on">
+            <svg class="studio-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 10h3.2L12 6.2v11.6L7.2 14H4z"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M16 9.2a3.8 3.8 0 0 1 0 5.6"/></svg>
+            <span class="studio-tool-label" data-sound-label>Voice: on</span>
+          </button>
+          <button type="button" class="studio-tool" data-action="fullscreen" aria-label="Studio projection">
+            <svg class="studio-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M8 4H4v4M16 4h4v4M8 20H4v-4M16 20h4v-4"/></svg>
+            <span class="studio-tool-label" data-fullscreen-label>Projection</span>
+          </button>
+        </div>
+
+        <div class="studio-deck-main">
+          <button type="button" class="studio-nav" data-action="prev" aria-label="Previous pose">
+            <svg class="studio-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M15 5 8 12l7 7"/></svg>
+            <span class="studio-btn-label">Prev</span>
+          </button>
+          <button type="button" class="studio-pause" data-action="pause" aria-pressed="false">
+            <svg class="studio-icon studio-icon--pause" data-icon="pause" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z"/></svg>
+            <svg class="studio-icon studio-icon--pause" data-icon="play" viewBox="0 0 24 24" aria-hidden="true" hidden><path fill="currentColor" d="M8 5.2 18.5 12 8 18.8z"/></svg>
+            <span data-pause-label>Pause practice</span>
+          </button>
+          <button type="button" class="studio-nav" data-action="next" aria-label="Next pose">
+            <span class="studio-btn-label">Next</span>
+            <svg class="studio-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="m9 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <div class="studio-deck-end">
+          <button type="button" class="studio-end" data-action="end">
+            <svg class="studio-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M9.2 9.2h5.6v5.6H9.2z"/></svg>
+            <span>Finish</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include practice-done-dialog.html %}
+
+  <p class="studio-live" data-live aria-live="polite"></p>
+</div>
